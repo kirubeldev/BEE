@@ -304,6 +304,10 @@ export default function NavBar() {
                       </li>
                     </ul> */}
                   </li>
+
+
+
+                  
                   <li className="">
                     <a href="/contact">Sign-up</a>
                     {/* <ul>
