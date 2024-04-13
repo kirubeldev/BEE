@@ -34,7 +34,9 @@
 body{
 	background-color: #eaebeae1;
 }
-
+.blog-detail.html{
+	font-size: 16px;
+}
 .slider-one{
 	position: relative;
 	overflow: hidden;

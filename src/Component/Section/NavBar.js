@@ -236,7 +236,7 @@ export default function NavBar() {
                     </ul> */}
                   </li>
                   <li className="">
-                    <a href="/contact">Donations</a>
+                    <a href="https://www.gofundme.com/">Donations</a>
                     {/* <ul>
                       <li>
                         <a href="contact.html">Contact</a>

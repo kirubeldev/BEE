@@ -10,11 +10,11 @@ export default function Contact() {
       
   <section
     className="page-title_two"
-    style={{ backgroundImage: "url(./assets/images/background/page-title-2.jpg)" }}
+    style={{ backgroundImage: "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_inMd3HyqyVHr6AU5HnuO_NtWIOlGyoqDEg&s)" ,backgroundPosition:"cover" }}
   >
     <div
       className="page-title_two-gradient"
-      style={{ backgroundImage: "url(./assets/images/background/pattern-6.png)" }}
+      style={{ backgroundImage: "url(./assets/images/background/pattern-6.png)" , marginLeft:"-300px"}}
     />
     <div className="auto-container">
       <h2>Contact Us</h2>

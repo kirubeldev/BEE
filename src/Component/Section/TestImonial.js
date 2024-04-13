@@ -55,7 +55,7 @@ export default function Testimonial() {
                             Smith Morgan
                           </h6>
                           <div className="testimonial-block_one-author-image">
-                            <img src="./assets/images/resource/author-1.jpg" alt="" />
+                            <img  style={{borderRadius:"90px"}} src="https://images.unsplash.com/photo-1540304801084-0944beb20de7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJsYWNrJTIwcGVvcGxlfGVufDB8fDB8fHww" alt="" />
                           </div>
                         </div>
                       </div>
@@ -82,7 +82,7 @@ export default function Testimonial() {
                             Moniba Uaso
                           </h6>
                           <div className="testimonial-block_one-author-image">
-                            <img src="./assets/images/resource/author-2.jpg" alt="" />
+                            <img  style={{borderRadius:"90px"}} src="https://images.unsplash.com/photo-1540304801084-0944beb20de7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJsYWNrJTIwcGVvcGxlfGVufDB8fDB8fHww" alt="" />
                           </div>
                         </div>
                       </div>
@@ -109,7 +109,7 @@ export default function Testimonial() {
                             Smith Morgan
                           </h6>
                           <div className="testimonial-block_one-author-image">
-                            <img src="./assets/images/resource/author-1.jpg" alt="" />
+                            <img  style={{borderRadius:"90px"}} src="https://images.unsplash.com/photo-1540304801084-0944beb20de7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJsYWNrJTIwcGVvcGxlfGVufDB8fDB8fHww" alt="" />
                           </div>
                         </div>
                       </div>
@@ -136,7 +136,7 @@ export default function Testimonial() {
                             Moniba Uaso
                           </h6>
                           <div className="testimonial-block_one-author-image">
-                            <img src="./assets/images/resource/author-2.jpg" alt="" />
+                            <img  style={{borderRadius:"90px"}} src="https://images.unsplash.com/photo-1540304801084-0944beb20de7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJsYWNrJTIwcGVvcGxlfGVufDB8fDB8fHww" alt="" />
                           </div>
                         </div>
                       </div>
