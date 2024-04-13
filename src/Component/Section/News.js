@@ -17,7 +17,7 @@ export default function News() {
         Discover latest news <br /> and articals
       </h2>
     </div>
-    <div className="row clearfix">
+    <div className="row clearfix"> 
       {/* News Block */}
       <div className="news-block_one col-lg-4 col-md-6 col-sm-12">
         <div
@@ -30,7 +30,7 @@ export default function News() {
               26 <span>oct</span>
             </div>
             <a href="blog-detail.html">
-              <img src="./assets/images/resource/news-1.jpg" alt="" />
+              <img src="https://i1.feedspot.com/200/5021303.jpg?t=1639721134" alt="" />
             </a>
           </div>
           <div className="news-block_one-content">
@@ -46,8 +46,7 @@ export default function News() {
             </ul>
             <h4 className="news-block_one-heading">
               <a href="blog-detail.html">
-                Why my satelite is better than yours
-              </a>
+              Black Enterprise is the premier resource for black entrepreneurs, black-owned businesses, and career, tech, and money content for black people              </a>
             </h4>
           </div>
         </div>
@@ -64,7 +63,7 @@ export default function News() {
               26 <span>oct</span>
             </div>
             <a href="blog-detail.html">
-              <img src="./assets/images/resource/news-2.jpg" alt="" />
+              <img src="https://i1.feedspot.com/200/5287711.jpg?t=1675168724" alt="" />
             </a>
           </div>
           <div className="news-block_one-content">
@@ -80,8 +79,7 @@ export default function News() {
             </ul>
             <h4 className="news-block_one-heading">
               <a href="blog-detail.html">
-                How to build your broadband connection
-              </a>
+              Blavity is a tech company for forward thinking Black millennials pushing the boundaries of culture and the status quo              </a>
             </h4>
           </div>
         </div>
@@ -98,7 +96,7 @@ export default function News() {
               26 <span>oct</span>
             </div>
             <a href="blog-detail.html">
-              <img src="./assets/images/resource/news-3.jpg" alt="" />
+              <img src="https://i1.feedspot.com/200/4858766.jpg?t=1622288025" alt="" />
             </a>
           </div>
           <div className="news-block_one-content">
@@ -114,8 +112,7 @@ export default function News() {
             </ul>
             <h4 className="news-block_one-heading">
               <a href="blog-detail.html">
-                Broadband connection needs to everyone life
-              </a>
+              I'm a millennial girl in the world who spends most of my days working in the corporate world, and my nights and weekends working on this little project of mine that you're reading right now              </a>
             </h4>
           </div>
         </div>

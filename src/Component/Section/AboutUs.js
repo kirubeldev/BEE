@@ -34,7 +34,7 @@ export default function AboutUs() {
                 WHO WE ARE
               </div>
               <h2 className="sec-title_heading tx-split-text split-in-right">
-                Get fast internet service <br /> with your TV service
+              Title here <br /> for about
               </h2>
             </div>
             <div className="about-one_bold-text" style={{textAlign:"justify"}}>

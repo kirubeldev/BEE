@@ -3,6 +3,7 @@ import React from 'react'
 export default function Tvprog() {
   return (
     <div>
+      
       <section className="gallery-one">
     <div className="auto-container">
       {/* Sec Title */}
@@ -26,7 +27,7 @@ Watch our TV <br /> Programs
           <div className="gallery-block_one">
             <div className="gallery-block_one-inner">
               <div className="gallery-block_one-image">
-                <img src="./assets/images/gallery/1.jpg" alt="" />
+                <img src="https://images.unsplash.com/photo-1573162201267-83bddd2a5f0d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTAwfHxibGFjayUyMHBlb3BsZXxlbnwwfDF8MHx8fDA%3D" alt="" />
                 <div className="gallery-block_one-overlay">
                   <a
                     href="https://www.youtube.com/watch?v=kxPCFljwJws"
@@ -63,7 +64,7 @@ Watch our TV <br /> Programs
           <div className="gallery-block_one">
             <div className="gallery-block_one-inner">
               <div className="gallery-block_one-image">
-                <img src="./assets/images/gallery/2.jpg" alt="" />
+                <img src="https://images.unsplash.com/photo-1503300961747-204cbbdaeb51?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGJsYWNrJTIwcGVvcGxlJTIwbXVzaWN8ZW58MHwxfDB8fHww" alt="" />
                 <div className="gallery-block_one-overlay">
                   <a
                     href="https://www.youtube.com/watch?v=kxPCFljwJws"
@@ -100,7 +101,7 @@ Watch our TV <br /> Programs
           <div className="gallery-block_one">
             <div className="gallery-block_one-inner">
               <div className="gallery-block_one-image">
-                <img src="./assets/images/gallery/3.jpg" alt="" />
+                <img src="https://images.unsplash.com/photo-1591470481729-2bcc11e3acb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzV8fGJsYWNrJTIwcGVvcGxlfGVufDB8MXwwfHx8MA%3D%3D" alt="" />
                 <div className="gallery-block_one-overlay">
                   <a
                     href="https://www.youtube.com/watch?v=kxPCFljwJws"
@@ -137,7 +138,7 @@ Watch our TV <br /> Programs
           <div className="gallery-block_one">
             <div className="gallery-block_one-inner">
               <div className="gallery-block_one-image">
-                <img src="./assets/images/gallery/4.jpg" alt="" />
+                <img src="https://images.unsplash.com/photo-1518882570151-157128e78fa1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGJsYWNrJTIwcGVvcGxlfGVufDB8MXwwfHx8MA%3D%3D" alt="" />
                 <div className="gallery-block_one-overlay">
                   <a
                     href="https://www.youtube.com/watch?v=kxPCFljwJws"
@@ -174,7 +175,7 @@ Watch our TV <br /> Programs
           <div className="gallery-block_one">
             <div className="gallery-block_one-inner">
               <div className="gallery-block_one-image">
-                <img src="./assets/images/gallery/5.jpg" alt="" />
+                <img  src="https://plus.unsplash.com/premium_photo-1661320933271-0c28a936da8d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmxhY2slMjBwZW9wbGUlMjB0dnxlbnwwfDF8MHx8fDA%3D" alt="" />
                 <div className="gallery-block_one-overlay">
                   <a
                     href="https://www.youtube.com/watch?v=kxPCFljwJws"

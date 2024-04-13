@@ -291,7 +291,7 @@ export default function NavBar() {
             </div>
           </div>
           <li className="" >
-                    <a href="/contact">login</a>
+                    <a href="/contact" style={{fontSize:"20px" , border:"1px black solid" , padding:"6px 15px"}}>login</a>
                     {/* <ul>
                       <li>
                         <a href="contact.html">Contact</a>
@@ -307,21 +307,8 @@ export default function NavBar() {
 
 
 
-                  
-                  <li className="">
-                    <a href="/contact">Sign-up</a>
-                    {/* <ul>
-                      <li>
-                        <a href="contact.html">Contact</a>
-                      </li>
-                      <li>
-                        <a href="contact-2.html">Contact 02</a>
-                      </li>
-                      <li>
-                        <a href="contact-3.html">Contact 03</a>
-                      </li>
-                    </ul> */}
-                  </li>
+
+                
           {/* End Outer Box */}
         </div>
       </div>

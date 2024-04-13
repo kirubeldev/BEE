@@ -13,7 +13,7 @@ export default function Testimonial() {
                 Testimonial
               </div>
               <h2 className="sec-title_heading tx-split-text split-in-left">
-                What they are talking about our service
+               title for testimony
               </h2>
             </div>
             {/* Button Box */}

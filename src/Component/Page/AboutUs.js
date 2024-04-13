@@ -204,11 +204,12 @@ export default function AboutUs() {
               Who we are
             </div>
             <h2 className="sec-title_heading tx-split-text split-in-up">
-              Providing live TV service <br /> with fast internet
+            Title for  <br /> About
             </h2>
           </div>
           <div className="fluid-two_feature" style={{textAlign:"justify"}}>
             <div className="fluid-two_feature-icon flaticon-wifi-routr" />
+            change the content here <br/>
             It is with great pleasure and excitement that we introduce to you the launch of our newest media channel, the Black Economy Excellence Channel (BBE Channel). The BEE Channel will be broadcasting globally in English with a mission to become the global nexus for African voices, promoting economic empowerment, commanding the narrative of the Global Black experience, and encouraging Africa-to-Africa collaboration. 
           </div>
           <div className="fluid-two_text" style={{textAlign:"justify"}}>
@@ -269,14 +270,14 @@ export default function AboutUs() {
               <div className="fiber-block_one-inner">
                 <div className="fiber-block_one-image">
                   <a href="service-detail.html">
-                    <img src="./assets/images/resource/fiber-1.jpg" alt="" />
+                    <img src="https://plus.unsplash.com/premium_photo-1664302049949-f3b3c1aec6d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QWZyaWNhbiUyMGlubm92YXRpb258ZW58MHx8MHx8fDA%3D" alt="" />
                   </a>
                 </div>
                 <div className="fiber-block_one-content">
                   <div className="fiber-block_one-icon flaticon-wifi-router-1" />
-                  <div className="fiber-block_one-title">internet</div>
+                  <div className="fiber-block_one-title">series</div>
                   <h4 className="fiber-block_one-heading">
-                    <a href="service-detail.html">Starts Form</a>
+                    <a href="service-detail.html">THE GRIOT</a>
                   </h4>
                   <div className="fiber-block_one-price">
                     {/* $<span>Mo</span> */}
@@ -292,14 +293,14 @@ export default function AboutUs() {
               <div className="fiber-block_one-inner">
                 <div className="fiber-block_one-image">
                   <a href="service-detail.html">
-                    <img src="./assets/images/resource/fiber-2.jpg" alt="" />
+                    <img src="https://plus.unsplash.com/premium_photo-1664304451835-a4f18e06ccad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBkb2N0b3J8ZW58MHwxfDB8fHww" alt="" />
                   </a>
                 </div>
                 <div className="fiber-block_one-content">
                   <div className="fiber-block_one-icon flaticon-smartphone" />
-                  <div className="fiber-block_one-title">internet</div>
+                  <div className="fiber-block_one-title">Series</div>
                   <h4 className="fiber-block_one-heading">
-                    <a href="service-detail.html">Starts Form</a>
+                    <a href="service-detail.html">TRADITIONAL MEDICINE</a>
                   </h4>
                   <div className="fiber-block_one-price">
                     {/* $<span>Mo</span> */}
@@ -315,14 +316,14 @@ export default function AboutUs() {
               <div className="fiber-block_one-inner">
                 <div className="fiber-block_one-image">
                   <a href="service-detail.html">
-                    <img src="./assets/images/resource/fiber-3.jpg" alt="" />
+                    <img src="https://images.unsplash.com/photo-1618887392199-2e8e3ec8b72d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QWZyaWNhJTJDJTIwbXVzaWN8ZW58MHx8MHx8fDA%3D" alt="" />
                   </a>
                 </div>
                 <div className="fiber-block_one-content">
                   <div className="fiber-block_one-icon flaticon-cinema" />
-                  <div className="fiber-block_one-title">internet</div>
+                  <div className="fiber-block_one-title">music</div>
                   <h4 className="fiber-block_one-heading">
-                    <a href="service-detail.html">Starts Form</a>
+                    <a href="service-detail.html">BLACK CYPHER</a>
                   </h4>
                   <div className="fiber-block_one-price">
                     {/* $<span>Mo</span> */}
@@ -338,14 +339,14 @@ export default function AboutUs() {
               <div className="fiber-block_one-inner">
                 <div className="fiber-block_one-image">
                   <a href="service-detail.html">
-                    <img src="./assets/images/resource/fiber-1.jpg" alt="" />
+                    <img src="https://images.unsplash.com/photo-1630861413071-a424a4d6d155?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZXRoaW9waWF8ZW58MHwxfDB8fHww" alt="" />
                   </a>
                 </div>
                 <div className="fiber-block_one-content">
                   <div className="fiber-block_one-icon flaticon-wifi-router-1" />
-                  <div className="fiber-block_one-title">internet</div>
+                  <div className="fiber-block_one-title"> children’s series</div>
                   <h4 className="fiber-block_one-heading">
-                    <a href="service-detail.html">Starts Form</a>
+                    <a href="service-detail.html">ENDERASE</a>
                   </h4>
                   <div className="fiber-block_one-price">
                     {/* $<span>Mo</span> */}
@@ -370,8 +371,10 @@ export default function AboutUs() {
       style={{ backgroundImage: "url(./assets/images/background/cta-2_pattern.png)" }}
     />
     <div className="auto-container">
-      <h2 className="cta-five_heading">
-        Get 7 days free admittance to <br /> limitless films and Programs
+      <h2 className="cta-five_heading" style={{fontSize:"35px"}}>
+      The future of the BEE Channel is bright! As the embodiment of the future of
+Black People across the globe, BEE Channel represents the true ESSENCE of
+the economically empowered Purpose Black Nation.
       </h2>
       {/* Button Box */}
       <div className="cta-five_button">
