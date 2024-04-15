@@ -13,6 +13,7 @@ import Contact from './Component/Page/Contact';
 import Blog from './Component/Page/Blog';
 import Home from './home';
 import Article from './Component/Section/article';
+import Chat from './Component/Page/chat';
 const App = () => {
   return (
     <Router>
@@ -32,6 +33,8 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/article" element={<Article/>} />
+        <Route path="/chat" element={<Chat />} />
+
        
       </Routes>
       <Footer />

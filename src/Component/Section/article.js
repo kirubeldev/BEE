@@ -1,6 +1,33 @@
 import React from 'react'
 import logo from "./img/logo.png"
 const Article = () => {
+  const Articles = [
+    {
+      "id": "1",
+      "articleimg":"https://images.theconversation.com/files/541753/original/file-20230808-23-3nwz2o.jpg?ixlib=rb-1.1.0&rect=9%2C277%2C1013%2C505&q=45&auto=format&w=668&h=324&fit=crop",
+       "authorImg": "https://plus.unsplash.com/premium_photo-1664908253145-be2ce4b4b061?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBwZW9wbGUlMjBtdXNpY3xlbnwwfDF8MHx8fDA%3D",
+      "authorName": "Monica Wasll",
+      "articleTitle": "Florida’s academic standards distort the contributions that enslaved Africans made to American society",
+     "description": "While a Florida curriculum implies that enslaved Africans ‘benefited’ from skills acquired through slavery, history shows they brought knowledge and skills to the US that predate their captivity."
+    },
+    {
+      "id": "2",
+      "articleimg":"https://images.theconversation.com/files/535099/original/file-20230630-29-v5vyxp.jpg?ixlib=rb-1.1.0&rect=55%2C4%2C2046%2C2046&q=45&auto=format&w=240&h=240&fit=crop",
+       "authorImg": "https://images.unsplash.com/photo-1530785602389-07594beb8b73?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhY2slMjBwZW9wbGUlMjBtdXNpY3xlbnwwfDF8MHx8fDA%3D",
+      "authorName": "Monica Wasll",
+      "articleTitle": " Police treatment in black and white – report on Minneapolis policing is the latest reminder of systemic racial disparities",
+     "description": " At a time when Americans celebrated their nation’s independence, it’s clear not every American enjoys the same constitutional rights."
+    },  {
+      "id": "1",
+      "articleimg":"https://images.theconversation.com/files/541753/original/file-20230808-23-3nwz2o.jpg?ixlib=rb-1.1.0&rect=9%2C277%2C1013%2C505&q=45&auto=format&w=668&h=324&fit=crop",
+       "authorImg": "https://plus.unsplash.com/premium_photo-1664908253145-be2ce4b4b061?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBwZW9wbGUlMjBtdXNpY3xlbnwwfDF8MHx8fDA%3D",
+      "authorName": "Monica Wasll",
+      "articleTitle": "Florida’s academic standards distort the contributions that enslaved Africans made to American society",
+     "description": "While a Florida curriculum implies that enslaved Africans ‘benefited’ from skills acquired through slavery, history shows they brought knowledge and skills to the US that predate their captivity."
+    }
+  ];
+  
+
   return (
     <div> 
 
@@ -83,20 +110,20 @@ const Article = () => {
         <div className="content-side col-lg-8 col-md-12 col-sm-12">
           <div className="blog-classic">
             {/* News Block */}
-            <div className="news-block_one">
-              <div className="news-block_one-inner">
+          { Articles.map((Article, index)=>( <div className="news-block_one">
+              <div key={index} className="news-block_one-inner">
                 <div className="news-block_one-image">
                   <div className="news-block_one-date">
                     26 <span>oct</span>
                   </div>
                   <a href="blog-detail.html">
-                    <img src="https://images.theconversation.com/files/541753/original/file-20230808-23-3nwz2o.jpg?ixlib=rb-1.1.0&rect=9%2C277%2C1013%2C505&q=45&auto=format&w=668&h=324&fit=crop" alt="" />
+                    <img src= {Article.articleimg} alt="" />
                   </a>
                   <div className="news-block_one-author">
                     <div className="news-block_one-author_image">
-                      <img src="https://plus.unsplash.com/premium_photo-1664908253145-be2ce4b4b061?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBwZW9wbGUlMjBtdXNpY3xlbnwwfDF8MHx8fDA%3D" alt="" />
+                      <img src={Article.authorImg} alt="" />
                     </div>
-                    Monica Wasll
+                    {Article.authorName}
                   </div>
                 </div>
                 <div className="news-block_one-content">
@@ -112,19 +139,19 @@ const Article = () => {
                   </ul>
                   <h4 className="news-block_one-heading">
                     <a href="blog-detail.html">
-                    Florida’s academic standards distort the contributions that enslaved Africans made to American society
-                    </a>
+                  {Article.articleTitle}
+                    </a> 
                   </h4>
                   <div className="news-block_one-text">
-                  While a Florida curriculum implies that enslaved Africans ‘benefited’ from skills acquired through slavery, history shows they brought knowledge and skills to the US that predate their captivity.{" "}
+                 {Article.description}{" "}
                   </div>
                 </div>
               </div>
-            </div>
+            </div>))}
 
 
 {/* News Block */}
-            <div className="news-block_one">
+            {/* <div className="news-block_one">
               <div className="news-block_one-inner">
                 <div className="news-block_one-image">
                   <div className="news-block_one-date">
@@ -161,9 +188,9 @@ const Article = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* News Block */}
-            <div className="news-block_one">
+            {/* <div className="news-block_one">
               <div className="news-block_one-inner">
                 <div className="news-block_one-image">
                   <div className="news-block_one-date">
@@ -200,9 +227,9 @@ const Article = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* News Block */}
-            <div className="news-block_one">
+            {/* <div className="news-block_one">
               <div className="news-block_one-inner">
                 <div className="news-block_one-image">
                   <div className="news-block_one-date">
@@ -241,7 +268,7 @@ const Article = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
           {/* Styled Pagination */}
           <ul className="styled-pagination text-center">

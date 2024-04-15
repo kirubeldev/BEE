@@ -167,7 +167,7 @@ export default function NavBar() {
                     </ul> */}
                   </li>
                   <li className="dropdon">
-                    <a href="#">Chat Room</a>
+                    <a href="/chat">Chat Room</a>
                     <ul>
                       <li>
                         <a href="projects.html">Projects</a>
