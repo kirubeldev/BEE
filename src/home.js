@@ -12,7 +12,7 @@ import AboutUs from './Component/Section/AboutUs';
 
 const Home = () => {
   return (
-    <div>
+    <div style={{backgroundColor:"#fff"}}>
         
         <HeroSection/>
         <AboutUs/>

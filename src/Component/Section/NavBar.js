@@ -5,7 +5,7 @@ export default function NavBar() {
     <div>
         <>
   {/* Main Header */}
-  <header className="main-header header-style-one">
+  <header className="main-header header-style-one" style={{zIndex:"999999" , backgroundColor:"#fff"}}>
     {/* Header Top */}
     <div className="header-top">
       <div className="auto-container">
@@ -222,7 +222,7 @@ export default function NavBar() {
                   </li>
                  
                   <li className="">
-                    <a href="/contact">TV Programs</a>
+                    <a href="/movie">TV Programs</a>
                     {/* <ul>
                       <li>
                         <a href="contact.html">Contact</a>

@@ -15,8 +15,10 @@ import Home from './home';
 import Article from './Component/Section/article';
 import Chat from './Component/Page/chat';
 import Blogs from './Component/Page/blogss';
+import Movie from './Component/Page/movie';
 const App = () => {
   return (
+    
     <Router>
       <NavBar  />
       <Routes>
@@ -30,6 +32,7 @@ const App = () => {
         <Route path="/tvprog" element={<Tvprog />} />
         <Route path="/news" element={<News />} />
      
+     
         
         <Route path="/contact" element={<Contact />} />
        
@@ -37,7 +40,7 @@ const App = () => {
         <Route path="/chat" element={<Chat />} />
         <Route path="/blogs" element={<Blogs />} />
 
-       
+          <Route path="/movie" element={<Movie />} />
       </Routes>
       <Footer />
     </Router>
