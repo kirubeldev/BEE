@@ -10,10 +10,11 @@ import News from './Component/Section/News'
 import Footer from './Component/Section/Footer'
 import AboutUs from './Component/Page/AboutUs';
 import Contact from './Component/Page/Contact';
-import Blog from './Component/Page/Blog';
+
 import Home from './home';
 import Article from './Component/Section/article';
 import Chat from './Component/Page/chat';
+import Blogs from './Component/Page/blogss';
 const App = () => {
   return (
     <Router>
@@ -31,9 +32,10 @@ const App = () => {
      
         
         <Route path="/contact" element={<Contact />} />
-        <Route path="/blog" element={<Blog />} />
+       
         <Route path="/article" element={<Article/>} />
         <Route path="/chat" element={<Chat />} />
+        <Route path="/blogs" element={<Blogs />} />
 
        
       </Routes>

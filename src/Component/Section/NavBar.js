@@ -119,7 +119,7 @@ export default function NavBar() {
                     </ul> */}
                   </li>
                   <li className="">
-                    <a href="/About">About</a>
+                    <a href="/About">About us</a>
                     {/* <ul>
                       <li>
                         <a href="">About Us</a>
@@ -201,7 +201,7 @@ export default function NavBar() {
                     </ul>
                   </li> */}
                   <li className="">
-                    <a href="/blog">Blog</a>
+                    <a href="/blogs">Blog</a>
                     {/* <ul>
                       <li>
                         <a href="blog.html">Our Blog</a>
