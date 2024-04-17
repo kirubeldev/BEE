@@ -9,12 +9,14 @@ import Tvprog from './Component/Section/tvprog';
 import News from './Component/Section/News'
 
 import AboutUs from './Component/Section/AboutUs';
+import Vision from './Component/Section/Vision';
 
 const Home = () => {
   return (
     <div style={{backgroundColor:"#fff"}}>
         
         <HeroSection/>
+        <Vision />
         <AboutUs/>
   <CTA/>
   

@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <section className="slider-one" >
     <div
-      className="swiper_carousel swiper-container"
+      className="swiper_carousel swiper-container" style={{ height:"100vh"}}
       data-swiper='{"spaceBetween":0,"slidesPerView":1,"navigation":{"nextEl":".main-slider_button-next","prevEl":".main-slider_button-prev","clickable":"true"},"pagination":{"el":".main-slider_pagination","clickable":"true"},"autoplay":{"delay":"6000"},"breakpoints":{"320":{"slidesPerView":1,"spaceBetween":0},"480":{"slidesPerView":1,"spaceBetween":0},"640":{"slidesPerView":1,"spaceBetween":0}}}'
     >
       <div className="swiper-wrapper">
@@ -16,7 +16,7 @@ export default function HeroSection() {
           />
           <div className="auto-container">
             {/* Content Column */}
-            <div className="slider-one_content-column">
+            <div className="slider-one_content-column" style={{marginTop:"200px"}}>
               <div className="slider-one_content-inner">
                 <div className="slider-one_title">Your Trusted Partner</div>
                 <h1 className="slider-one_heading">
@@ -54,7 +54,7 @@ export default function HeroSection() {
           />
           <div className="auto-container">
             {/* Content Column */}
-            <div className="slider-one_content-column">
+            <div className="slider-one_content-column"  style={{marginTop:"200px"}}>
               <div className="slider-one_content-inner">
                 <div className="slider-one_title">Your Trusted Partner</div>
                 <h1 className="slider-one_heading">
@@ -91,7 +91,7 @@ export default function HeroSection() {
           />
           <div className="auto-container">
             {/* Content Column */}
-            <div className="slider-one_content-column">
+            <div className="slider-one_content-column"  style={{marginTop:"200px"}}>
               <div className="slider-one_content-inner">
                 <div className="slider-one_title">Your Trusted Partner</div>
                 <h1 className="slider-one_heading">
