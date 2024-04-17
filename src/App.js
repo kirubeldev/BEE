@@ -16,7 +16,9 @@ import Article from './Component/Section/article';
 import Chat from './Component/Page/chat';
 import Blogs from './Component/Page/blogss';
 import Movie from './Component/Page/movie';
+import Vision from './Component/Section/Vision';
 const App = () => {
+  
   return (
     
     <Router>
@@ -35,6 +37,7 @@ const App = () => {
      
         
         <Route path="/contact" element={<Contact />} />
+        <Route path="/vision" element={<Vision />} />
        
         <Route path="/article" element={<Article/>} />
         <Route path="/chat" element={<Chat />} />

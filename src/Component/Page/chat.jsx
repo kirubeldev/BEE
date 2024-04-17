@@ -2,7 +2,8 @@ import React, { Fragment } from "react";
 
 const Chat = () => {
   return (
-    <div>  <section
+    <div>  
+      {/* <section
     className="page-title_two"
     style={{
       backgroundImage: "url(https://img.freepik.com/free-vector/chat-bot-mobile-chatting-isometric-concept_107791-286.jpg?t=st=1713179279~exp=1713182879~hmac=130cc55787a021d913961f2b658e50ef3621fccc481ccac8f104b88b40f3d1a2&w=1380)",
@@ -24,7 +25,7 @@ const Chat = () => {
         <li>Chat Room</li>
       </ul>
     </div>
-  </section>    
+  </section>     */}
    <div className="allof">
     <div id="frame" >
       <style
@@ -348,7 +349,7 @@ const Chat = () => {
         </div>
         <div className="message-input">
           <div className="wrap">
-            <input type="text" placeholder="Write your message..." />
+            <input type="text" placeholder="Write your message..." className="inputt"  style={{backgroundColor:"#fff !important"}}/>
             <i className="fa fa-paperclip attachment" aria-hidden="true" />
             <button className="submit">
               <i className="fa fa-paper-plane" aria-hidden="true" />

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function HeroSection() {
   return (
-    <section className="slider-one">
+    <section className="slider-one" >
     <div
       className="swiper_carousel swiper-container"
       data-swiper='{"spaceBetween":0,"slidesPerView":1,"navigation":{"nextEl":".main-slider_button-next","prevEl":".main-slider_button-prev","clickable":"true"},"pagination":{"el":".main-slider_pagination","clickable":"true"},"autoplay":{"delay":"6000"},"breakpoints":{"320":{"slidesPerView":1,"spaceBetween":0},"480":{"slidesPerView":1,"spaceBetween":0},"640":{"slidesPerView":1,"spaceBetween":0}}}'

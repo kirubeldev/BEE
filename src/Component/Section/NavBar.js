@@ -1,8 +1,38 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "./img/logo.png"
+import { useMatch } from 'react-router-dom'
 export default function NavBar() {
+  const [menu, setMenu] = useState(false);
+      
+        useEffect(() => {
+          window.scroll(0, 0);
+        }, []);
+      
+        const hamburger = () => {
+          setMenu(!menu);
+          // console.log("clicked");
+          // const myNav = document.querySelector('.main-menu__list'); // Select the navigation element
+          // myNav.style.display = myNav.style.display === "none" ? "block" : "none"; // Toggle the display property between "block" and "none"
+        };
+        const closee = () => {
+          setMenu(false);
+        };
+        const [showNestedList, setShowNestedList] = useState(false);
+      
+        const handleServiceClick = () => {
+          setShowNestedList(!showNestedList);
+        };
+      
+        const [isNestedVisible, setIsNestedVisible] = useState(false);
+      
+        const toggleNestedVisibility = () => {
+          setIsNestedVisible(!isNestedVisible);
+        };
+      
+  const movie = useMatch('/movie')
   return (
-    <div>
+    <div className='mynav'>
         <>
   {/* Main Header */}
   <header className="main-header header-style-one" style={{zIndex:"999999" , backgroundColor:"#fff"}}>
@@ -10,7 +40,7 @@ export default function NavBar() {
     <div className="header-top">
       <div className="auto-container">
         <div className="inner-container">
-          <div className="d-flex justify-content-between flex-wrap">
+          <div className="d-flex justify-content-between flex-wrap topp">
             <ul className="header-list">
               <li>
                 <span className="icon fas fa-clock fa-fw" />
@@ -41,8 +71,8 @@ export default function NavBar() {
       </div>
     </div>
     {/* Header Lower */}
-    <div className="header-lower">
-      <div className="auto-container">
+    <div className="header-lower"  style={{position:movie ? "sticky" : "",top:0}}>
+      <div className="auto-container" >
         <div className="inner-container d-flex align-items-center justify-content-between">
           {/* Logo Box */}
           <div className="logo-box d-flex align-items-center">
@@ -286,25 +316,18 @@ export default function NavBar() {
             {/* Mobile Navigation Toggler */}
             <div className="mobile-nav-toggler">
               <span className="icon">
-                <img src="./assets/images/icons/menu.png" alt="" />
+                <img src="./assets/images/icons/menu.png" alt="" onClick={() => setMenu(!menu)} />
               </span>
             </div>
           </div>
-          <li className="" >
-                    <a href="/contact" style={{fontSize:"20px" , border:"1px black solid" , padding:"6px 15px"}}>login</a>
-                    {/* <ul>
-                      <li>
-                        <a href="contact.html">Contact</a>
-                      </li>
-                      <li>
-                        <a href="contact-2.html">Contact 02</a>
-                      </li>
-                      <li>
-                        <a href="contact-3.html">Contact 03</a>
-                      </li>
-                    </ul> */}
-                  </li>
-
+          <div className="fluid-two_button">
+            <a className="btn-style-four theme-btn" href="about.html">
+              <div className="btn-wrap">
+                <span className="text-two">Login</span>
+                <span className="text-one">Login</span>
+              </div>
+            </a>
+          </div>
 
 
 
@@ -459,6 +482,226 @@ export default function NavBar() {
       </div>
     </div>
   </div>
+  {menu && (
+              <nav
+                style={{
+                  position: "fixed",
+                  borderRadius: "10px 10px 0 0px",
+                  top: "0",
+                  right: 0,
+                  width: "70%",
+                  background: "#ffffff !important",
+                  height: "0vh",
+                  zIndex: 999999999,
+                  //there is a css in the garden css for the background color
+                }}
+              >
+                <div className="myol">
+                  <ol style={{ listStyle: "none " }}>
+                    <i
+                      class="fa fa-times"
+                      aria-hidden="true"
+                      style={{
+                        position: "absolute ",
+                        right: "66px",
+                        fontSize: "37px",
+                        color: "white",
+                      }}
+                      onClick={() => setMenu(false)}
+                    ></i>
+                    <div style={{ paddingTop: "60px" }}>
+                      <Link  to="/" onClick={() => setMenu(false)} style={{ marginLeft: "10px", color: "white" , fontSize:"17px" }}>
+                        Home
+                      </Link>{" "}
+                      <hr style={{ color: "white", zIndex: "10" }} />
+                      <div>
+                        <Link to="/about"
+                    
+                          style={{ marginLeft: "10px", color: "white" , fontSize:"17px", borderBottom:"1px white solid" }}
+                          onClick={handleServiceClick}
+                        >
+                         About us
+                         <hr style={{ color: "white", zIndex: "10" , width:"100%" }} />
+
+                        </Link>
+                        {/* {showNestedList && (
+                          <ol style={{ listStyle: "none", marginTop: "20px" }}>
+                            <li>
+                              <Link
+                              onClick={() => setMenu(false)}
+                                to="/export"
+                                style={{ marginLeft: "20px", color: "white", fontSize:"20px" }}
+                              >
+                                Export
+                              </Link>
+                            </li>
+                            <hr />
+                            <li>
+                              <Link
+                              onClick={() => setMenu(false)}
+                                to="/imp"
+                                style={{ marginLeft: "20px", color: "white" , fontSize:"20px"}}
+                              >
+                                Import
+                              </Link>
+                            </li>
+                          </ol>
+                        )} */}
+                        <hr style={{ color: "white", zIndex: "99" }} />
+                      </div>
+                      <Link
+                      onClick={() => setMenu(false)}
+                        to="/article"
+                        style={{ marginLeft: "10px", color: "white", fontSize:"17px" }}
+                      >
+                        Article
+                      </Link>
+                      <hr style={{ color: "white", zIndex: "10" }} />
+                      <Link
+                      onClick={() => setMenu(false)}
+                        to="/chat"
+                        style={{ marginLeft: "10px", color: "white", fontSize:"17px" }}
+                      >
+                        Chat Room
+                      </Link>
+                      <hr style={{ color: "white", zIndex: "10" }} />
+                       <Link
+                      onClick={() => setMenu(false)}
+                        to="/movie"
+                        style={{ marginLeft: "10px", color: "white", fontSize:"17px" }}
+                      >
+                        movie
+                      </Link>
+                      <hr style={{ color: "white", zIndex: "10" }} />
+                      <Link
+                      onClick={() => setMenu(false)}
+                        to="/blogs"
+                        style={{ marginLeft: "10px", color: "white", fontSize:"17px" }}
+                      >
+                        Blog
+                      </Link>
+                      <hr style={{ color: "white", zIndex: "10" }} />
+                      <Link
+                      onClick={() => setMenu(false)}
+                        to="/donation"
+                        style={{ marginLeft: "10px", color: "white", fontSize:"17px" }}
+                      >
+                        Donation
+                      </Link>
+                      <hr style={{ color: "white", zIndex: "10" }} />
+                      <Link
+                      onClick={() => setMenu(false)}
+                        to="/contact"
+                        style={{ marginLeft: "10px", color: "white", fontSize:"17px" }}
+                      >
+                        Contact
+                      </Link>
+                      <hr style={{ color: "white", zIndex: "10" }} />
+                    </div>
+                  </ol>
+
+                  <div 
+                    style={{
+                      maxWidth: "1500px",
+                      marginTop: "130px",
+                      marginLeft: "10px",
+                      color: "white",
+                      position:"fixed",
+                      bottom:"30px",
+                    }}
+                  >
+                    <li style={{ listStyle: "none" }}>
+                      {" "}
+                      <i
+                        className="fa fa-phone site-text-primary"
+                        style={{ color: "#d7a222" }}
+                      />{" "}
+                      <b className="p-lr5 text-uppercase">Tel: +(251)-942609556</b>{" "}
+                    
+                    </li>
+                    <br />
+                    <li style={{ listStyle: "none" }}>
+                      <i
+                        className="fa fa-envelope site-text-primary"
+                        style={{ color: "#d7a222" }}
+                      />{" "}
+                      <b className="p-lr5 text-uppercase">Email : </b>
+                      michael.masresha@purposeblack.et
+                    </li>
+                    <br />
+
+                    <li style={{ listStyle: "none" }}>
+                      <i
+                        className="fa fa-location-arrow site-text-primary"
+                        style={{ color: "#d7a222" }}
+                      />{" "}
+                      <b style={{ fontSize: "16px" }}>LOCATION :</b>Addis Ababa,<br /> Ethiopia, Sengatera
+                      Negadwoch Hibret BLDG,
+                      5th Floor
+                      <br />
+                      <br />
+                      <a
+                        href="https://facebook.com/"
+                        style={{
+                          marginRight: "20px",
+                          fontSize: "25px",
+                          marginTop: "15px",
+                        }}
+                      >
+                        <i
+                          className="fab fa-facebook-f"
+                          style={{ color: "#d7a222" }}
+                        />
+                        <span className="sr-only">Facebook</span>
+                      </a>
+                      <a 
+                        href="https://twitter.com/"
+                        style={{
+                          marginRight: "20px",
+                          fontSize: "25px",
+                          marginTop: "15px",
+                        }}
+                      >
+                        <i
+                          className="fab fa-twitter"
+                          aria-hidden="true"
+                          style={{ color: "#d7a222" }}
+                        />
+                        <span className="sr-only">Twitter</span>
+                      </a>
+                      <a
+                        href="https://linkedin.com/"
+                        style={{
+                          marginRight: "20px",
+                          fontSize: "25px",
+                          marginTop: "15px",
+                        }}
+                      >
+                        <i
+                          className="fab fa-linkedin-in"
+                          style={{ color: "#d7a222" }}
+                        />
+                        <span className="sr-only">Linkedin</span>
+                      </a>
+                      <a
+                        href="https://www.instagram.com/"
+                        style={{
+                          marginRight: "20px",
+                          fontSize: "25px",
+                          marginTop: "15px",
+                        }}
+                      >
+                        <i
+                          className="fab fa-instagram"
+                          style={{ color: "#d7a222" }}
+                        />
+                        <span className="sr-only">Instagram</span>
+                      </a>
+                    </li>
+                  </div>
+                </div>
+              </nav>
+            )}
 </>
 
     </div>

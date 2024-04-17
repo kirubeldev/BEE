@@ -2,20 +2,11 @@ import React from 'react'
 
 const Movie = () => {
   return (
-    <div className='body'><>
+    <div className='body' style={{paddingBottom:"50px", marginBottom:"50px"}}><>
     <span className="screen-darken" />
     {/* loader Start */}
     {/* loader Start */}
-    <div className="loader simple-loader">
-      <div className="loader-body">
-        <img
-          src="asset/images/loader.gif"
-          alt="loader"
-          className="img-fluid "
-          width={300}
-        />
-      </div>
-    </div>
+   
     {/* loader END */} {/* loader END */}
     <main className="main-content">
       {/*Nav Start*/}
@@ -4535,6 +4526,8 @@ const Movie = () => {
                             >
                               <li className="nav-item" role="presentation">
                                 <button
+                               
+                                  
                                   className="nav-link active"
                                   data-bs-toggle="pill"
                                   data-bs-target="#pills-series1-season-one"

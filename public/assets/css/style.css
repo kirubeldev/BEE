@@ -34,6 +34,33 @@
 body{
 	background-color: #eaebeae1;
 }
+
+@media screen and (max-width : 900px) {
+
+.navbar-collapse{
+	display: none !important;
+}
+.mobile-nav-toggler{
+	
+	padding-top: 20px;
+}
+.topp{
+		display: none !important;
+	}
+	.header-top{
+		display: none;
+	}
+}
+@media screen and (max-width : 740px) {
+	}
+	@media screen and (min-width : 740px) {
+		.mobile-nav-toggler{
+			display: none !important;
+		}}
+
+
+
+	
 .gradient-custom {
 	/* fallback for old browsers */
 	background: #fccb90;
@@ -64,12 +91,12 @@ body{
 	font-size: 16px;
 }
 .slider-one{
-	position: relative;
-	overflow: hidden;
+	position: relative !important; 
+	overflow: hidden !important;
 }
 
 .slider-one_image{
-	position: absolute;
+	position: absolute !important;
 	left: 0px;
 	top: 0px;
 	right: 0px;
@@ -10623,4 +10650,30 @@ body{
 .contact-form-section .image-column .inner-column{
 	position:relative;
 	text-align: center;
-}
+}.myol{
+	background-color:rgba(0, 0, 0, 0.788);
+	/* margin-top: 100px; */
+	width: 145%;
+	margin-left: -53%;
+	height: 100vh;
+	display: block;
+  }
+  .myol ol nav li{
+	border-bottom: 1px white;
+  }
+
+  /* chat */
+
+  .inputt{
+	background-color: #fdfbfb !important;
+  }
+
+
+
+  .mynav{
+	position:"relative"
+  }
+  .slider-one{
+	z-index:99999999999999 !important
+	;
+  }

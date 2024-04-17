@@ -10,6 +10,12 @@
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+ .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #d7a222 !important;
+    padding: 10px 14px !important;
+}
 .general-zindex {
   z-index: 900;
 }
@@ -122,7 +128,7 @@ img {
 :root,
 [data-bs-theme="light"] {
   --bs-blue: #e50914;
-  --bs-indigo: #6610f2;
+  --bs-indigo: #d7a222;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
   --bs-red: #545e75;
@@ -130,7 +136,7 @@ img {
   --bs-yellow: #ecba12;
   --bs-green: #14e788;
   --bs-teal: #20c997;
-  --bs-cyan: #007aff;
+  --bs-cyan: #d7a222;
   --bs-black: #000;
   --bs-white: #fff;
   --bs-gray: #6c757d;
@@ -4531,7 +4537,7 @@ fieldset:disabled .btn {
   margin-left: calc(-0.5 * var(--bs-card-cap-padding-x));
   border-bottom: 0;
 }
-.card-header-tabs .naaaaaaaaaaa-link.active {
+.card-header-tabs .nav-link.active {
   background-color: var(--bs-card-bg);
   border-bottom-color: var(--bs-card-bg);
 }
