@@ -11,9 +11,7 @@ export default function NavBar() {
       
         const hamburger = () => {
           setMenu(!menu);
-          // console.log("clicked");
-          // const myNav = document.querySelector('.main-menu__list'); // Select the navigation element
-          // myNav.style.display = myNav.style.display === "none" ? "block" : "none"; // Toggle the display property between "block" and "none"
+        
         };
         const closee = () => {
           setMenu(false);
@@ -378,110 +376,7 @@ export default function NavBar() {
   </header>
   {/* End Main Header */}
   {/* Sidebar Cart Item */}
-  <div className="xs-sidebar-group info-group">
-    <div className="xs-overlay xs-bg-black" />
-    <div className="xs-sidebar-widget">
-      <div className="sidebar-widget-container">
-        <div className="close-button">
-          <span className="far fa-times fa-fw" />
-        </div>
-        <div className="sidebar-textwidget">
-          {/* Sidebar Info Content */}
-          <div className="sidebar-info-contents">
-            <div className="content-inner">
-              {/* Title Box */}
-              <div className="title-box">
-                <h5>
-                  Broadband <span>connection</span>
-                </h5>
-                <div className="price">$15 from free economy shipping</div>
-              </div>
-              {/* Empty Cart Box */}
-              <div className="empty-cart-box">
-                {/* No Product */}
-                <div className="no-cart">
-                  <span className="icon far fa-cart-plus fa-fw" />
-                  No products in cart.
-                </div>
-              </div>
-              {/* Lower Box */}
-              <div className="lower-box">
-                <h5>
-                  Popular <span>Suggestions</span>
-                </h5>
-                {/* Post Block */}
-                <div className="post-block">
-                  <div className="inner-box">
-                    <div className="image">
-                      <img src="./assets/images/resource/post-thumb-1.jpg" alt="" />
-                    </div>
-                    <h6>
-                      <a href="#">Free Installation</a>
-                    </h6>
-                    <div className="rating">
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                    </div>
-                    <div className="price-box">$125</div>
-                    <a className="theme-btn bag-btn" href="#">
-                      add to bag
-                    </a>
-                  </div>
-                </div>
-                {/* Post Block */}
-                <div className="post-block">
-                  <div className="inner-box">
-                    <div className="image">
-                      <img src="./assets/images/resource/post-thumb-2.jpg" alt="" />
-                    </div>
-                    <h6>
-                      <a href="#">BLACK ECONOMIC EXCELLENCE</a>
-                    </h6>
-                    <div className="rating">
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                    </div>
-                    <div className="price-box">$205</div>
-                    <a className="theme-btn bag-btn" href="#">
-                      add to bag
-                    </a>
-                  </div>
-                </div>
-                {/* Post Block */}
-                <div className="post-block">
-                  <div className="inner-box">
-                    <div className="image">
-                      <img src="./assets/images/resource/post-thumb-3.jpg" alt="" />
-                    </div>
-                    <h6>
-                      <a href="#">4K and 8K Quality</a>
-                    </h6>
-                    <div className="rating">
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                    </div>
-                    <div className="price-box">$25</div>
-                    <a className="theme-btn bag-btn" href="#">
-                      add to bag
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+ 
   {menu && (
               <nav
                 style={{
@@ -517,11 +412,11 @@ export default function NavBar() {
                       <div>
                         <Link to="/about"
                     
-                          style={{ marginLeft: "10px", color: "white" , fontSize:"17px", borderBottom:"1px white solid" }}
+                          style={{ marginLeft: "10px", color: "white" , fontSize:"17px" }}
                           onClick={handleServiceClick}
                         >
                          About us
-                         <hr style={{ color: "white", zIndex: "10" , width:"100%" }} />
+                        <hr/>
 
                         </Link>
                         {/* {showNestedList && (
@@ -604,7 +499,7 @@ export default function NavBar() {
                     style={{
                       maxWidth: "1500px",
                       marginTop: "130px",
-                      marginLeft: "10px",
+                      marginLeft: "40px",
                       color: "white",
                       position:"fixed",
                       bottom:"30px",
@@ -635,8 +530,8 @@ export default function NavBar() {
                         className="fa fa-location-arrow site-text-primary"
                         style={{ color: "#d7a222" }}
                       />{" "}
-                      <b style={{ fontSize: "16px" }}>LOCATION :</b>Addis Ababa,<br /> Ethiopia, Sengatera
-                      Negadwoch Hibret BLDG,
+                      <b style={{ fontSize: "16px", lineHeight:"40px" }}>LOCATION :</b>Addis Ababa,<br /> Ethiopia, Sengatera
+                      Negadwoch Hibret BLDG,<br /> 
                       5th Floor
                       <br />
                       <br />

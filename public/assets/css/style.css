@@ -50,6 +50,9 @@ body{
 	.header-top{
 		display: none;
 	}
+	.service-one{
+		margin-top: 150px;
+	}
 }
 @media screen and (max-width : 740px) {
 	}
@@ -10673,7 +10676,5 @@ body{
   .mynav{
 	position:"relative"
   }
-  .slider-one{
-	
-	;
-  }
+
+  

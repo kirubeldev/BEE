@@ -1,5 +1,6 @@
 import React from 'react'
-
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 const Movie = () => {
   return (
     <div className='body' style={{paddingBottom:"50px", marginBottom:"50px"}}><>
@@ -32,7 +33,7 @@ const Movie = () => {
                         <div className="block-images position-relative ">
                           <div className="img-box">
                             <img
-                              src="asset/images/movies/ott1.html"
+                              src="https://images.unsplash.com/photo-1484085909914-bd14e593a7cf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM0fHxibGFjayUyMHBlb3BsZXxlbnwwfDB8MHx8fDA%3D"
                               className="img-fluid"
                               alt=""
                               loading="lazy"
@@ -83,7 +84,7 @@ const Movie = () => {
                     </div>
                   </div>
                   <div className="slider-prev swiper-button">
-                    <i className="iconly-Arrow-Left-2 icli" />
+                  {/* <FontAwesomeIcon icon={faArrowLeft} /> */}
                   </div>
                   <div className="slider-next swiper-button">
                     <i className="iconly-Arrow-Right-2 icli" />
