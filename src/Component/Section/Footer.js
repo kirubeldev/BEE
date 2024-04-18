@@ -3,9 +3,13 @@ import logo from "./img/logo2.svg";
 import { useMatch } from "react-router-dom";
 export default function Footer() {
   const chat = useMatch("/chat");
+  
+  const chatm1 = useMatch("/chatm1");
+  const chatm2 = useMatch("/chatm2");
+
   return (
     <>
-      {!chat && (
+         {!(chat || chatm1 || chatm2 ) && (
         <>
           <section className="cta-three">
             <div className="auto-container">

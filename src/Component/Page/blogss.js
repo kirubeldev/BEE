@@ -1,8 +1,9 @@
 import React from 'react'
  import News from '../Section/News'
+
+
 const Blogs = () => {
- 
-   
+  
     
 
     

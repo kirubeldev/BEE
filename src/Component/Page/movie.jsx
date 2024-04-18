@@ -1,6 +1,7 @@
 import React from 'react'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+
 const Movie = () => {
   return (
     <div className='body' style={{paddingBottom:"50px", marginBottom:"50px"}}><>

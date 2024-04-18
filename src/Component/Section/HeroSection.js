@@ -16,7 +16,7 @@ export default function HeroSection() {
           />
           <div className="auto-container" style={{ width:"100vw"}}>
             {/* Content Column */}
-            <div className="slider-one_content-column" style={{marginTop:"200px" , width:"100vw"}}>
+            <div className="slider-one_content-column" style={{marginTop:"300px" , width:"100vw"}}>
               <div className="slider-one_content-inner">
                 <div className="slider-one_title">Your Trusted Partner</div>
                 <h1 className="slider-one_heading">
@@ -54,7 +54,7 @@ export default function HeroSection() {
           />
           <div className="auto-container" style={{ width:"100vw"}}>
             {/* Content Column */}
-            <div className="slider-one_content-column"  style={{marginTop:"200px", width:"100vw"}}>
+            <div className="slider-one_content-column"  style={{marginTop:"300px", width:"100vw"}}>
               <div className="slider-one_content-inner">
                 <div className="slider-one_title">Your Trusted Partner</div>
                 <h1 className="slider-one_heading">
@@ -91,7 +91,7 @@ export default function HeroSection() {
           />
           <div className="auto-container"  style={{ width:"100vw"}}>
             {/* Content Column */}
-            <div className="slider-one_content-column"  style={{marginTop:"200px", width:"100vw"}}>
+            <div className="slider-one_content-column"  style={{marginTop:"300px", width:"100vw"}}>
               <div className="slider-one_content-inner">
                 <div className="slider-one_title">Your Trusted Partner</div>
                 <h1 className="slider-one_heading">

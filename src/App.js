@@ -17,6 +17,8 @@ import Chat from './Component/Page/chat';
 import Blogs from './Component/Page/blogss';
 import Movie from './Component/Page/movie';
 import Vision from './Component/Section/Vision';
+import Chatm1 from './Component/Page/chatm1';
+import Chatm2 from './Component/Page/chatm2';
 const App = () => {
   
   return (
@@ -33,6 +35,8 @@ const App = () => {
         <Route path="/show" element={<Show />} />
         <Route path="/tvprog" element={<Tvprog />} />
         <Route path="/news" element={<News />} />
+        <Route path="/chatm1" element={<Chatm1 />} />
+        <Route path="/chatm2" element={<Chatm2 />} />
      
      
         

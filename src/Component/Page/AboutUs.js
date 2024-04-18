@@ -1,10 +1,11 @@
 import React from 'react'
 import Footer from '../Section/Footer'
-import NavBar from '../Section/NavBar'
 
 export default function AboutUs() {
   return (
     <div>
+      
+      
         <>
         
         <>
