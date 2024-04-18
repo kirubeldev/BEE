@@ -166,6 +166,16 @@
    
     <div id="root"></div>
     <script src="./assets/js/jquery.js"></script>
+    <script>const resizeObserver = new ResizeObserver(entries => {
+      for (let entry of entries) {
+        // Handle size changes
+        console.log('Element size changed:', entry.target.clientWidth, entry.target.clientHeight);
+      }
+    });
+    
+    // Attach ResizeObserver to the element you want to observe
+    const targetElement = document.querySelector('.element-to-observe');
+    resizeObserver.observe(targetElement);</script>
 <script src="./assets/js/popper.min.js"></script>
 <script src="./assets/js/bootstrap.min.js"></script>
 <script src="./assets/js/magnific-popup.min.js"></script>

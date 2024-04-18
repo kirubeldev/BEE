@@ -84,10 +84,11 @@ const Movie = () => {
                     </div>
                   </div>
                   <div className="slider-prev swiper-button">
-                  {/* <FontAwesomeIcon icon={faArrowLeft} /> */}
+                  <i className="iconly-Arrow-left-2 icli" />
                   </div>
                   <div className="slider-next swiper-button">
                     <i className="iconly-Arrow-Right-2 icli" />
+            
                   </div>
                 </div>
               </div>

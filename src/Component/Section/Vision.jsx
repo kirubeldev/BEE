@@ -2,7 +2,7 @@ import React from 'react'
 
 const Vision = () => {
   return (
-    <div>
+    <div className='vision' style={{marginTop:"60px"}}> 
   <section className="service-one">
   <div className="auto-container">
     <div className="row g-0">

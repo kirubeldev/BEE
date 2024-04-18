@@ -14,9 +14,9 @@ export default function HeroSection() {
             className="slider-one_image"
             style={{ backgroundImage: "url(https://images.unsplash.com/photo-1484085909914-bd14e593a7cf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM0fHxibGFjayUyMHBlb3BsZXxlbnwwfDB8MHx8fDA%3D)" , backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundPosition:"center center" }}
           />
-          <div className="auto-container">
+          <div className="auto-container" style={{ width:"100vw"}}>
             {/* Content Column */}
-            <div className="slider-one_content-column" style={{marginTop:"200px"}}>
+            <div className="slider-one_content-column" style={{marginTop:"200px" , width:"100vw"}}>
               <div className="slider-one_content-inner">
                 <div className="slider-one_title">Your Trusted Partner</div>
                 <h1 className="slider-one_heading">
@@ -52,9 +52,9 @@ export default function HeroSection() {
             className="slider-one_image"
             style={{ backgroundImage: "url(https://images.unsplash.com/photo-1484086471933-a4fcb164629c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTUyfHxibGFjayUyMHBlb3BsZXxlbnwwfDB8MHx8fDA%3D)", backgroundRepeat:"no-repeat"  , backgroundSize:"cover", backgroundPosition:"center center"}}
           />
-          <div className="auto-container">
+          <div className="auto-container" style={{ width:"100vw"}}>
             {/* Content Column */}
-            <div className="slider-one_content-column"  style={{marginTop:"200px"}}>
+            <div className="slider-one_content-column"  style={{marginTop:"200px", width:"100vw"}}>
               <div className="slider-one_content-inner">
                 <div className="slider-one_title">Your Trusted Partner</div>
                 <h1 className="slider-one_heading">
@@ -89,9 +89,9 @@ export default function HeroSection() {
             className="slider-one_image"
             style={{ backgroundImage: "url(https://images.unsplash.com/photo-1485618609651-5a8bd6efc777?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTcxfHxibGFjayUyMHBlb3BsZXxlbnwwfDB8MHx8fDA%3D)" , backgroundRepeat:"no-repeat" , backgroundSize:"cover", backgroundPosition:"center center" }}
           />
-          <div className="auto-container">
+          <div className="auto-container"  style={{ width:"100vw"}}>
             {/* Content Column */}
-            <div className="slider-one_content-column"  style={{marginTop:"200px"}}>
+            <div className="slider-one_content-column"  style={{marginTop:"200px", width:"100vw"}}>
               <div className="slider-one_content-inner">
                 <div className="slider-one_title">Your Trusted Partner</div>
                 <h1 className="slider-one_heading">
