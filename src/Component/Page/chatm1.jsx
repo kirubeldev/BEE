@@ -1485,11 +1485,11 @@ const Chatm1 = () => {
                   {/* <img src="./../../assetss/assetss/media/heroicons/outline/dots-vertical.svg" alt="" class="injectable hw-20"> */}
                 </a>
                 <div className="dropdown-menu dropdown-menu-right">
-                  <a
+                  {/* <a
                     className="dropdown-item align-items-center d-flex"
                     href="#"
                   >
-                    {/* Default :: Inline SVG */}
+                    
                     <svg
                       className="hw-20 mr-2"
                       fill="none"
@@ -1503,18 +1503,17 @@ const Chatm1 = () => {
                         d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                       />
                     </svg>
-                    {/* Alternate :: External File link */}
-                    {/* <img src="./../../assetss/assetss/media/heroicons/outline/phone.svg" alt="" class="injectable hw-20 mr-2"> */}
+                    
                     <span>Call</span>
-                  </a>
-                  <a
+                  </a> */}
+                  {/* <a
                     className="dropdown-item align-items-center d-flex"
                     href="#"
                     data-toggle="collapse"
                     data-target="#searchCollapse"
                     aria-expanded="false"
                   >
-                    {/* Default :: Inline SVG */}
+                   
                     <svg
                       className="hw-20 mr-2"
                       fill="none"
@@ -1528,10 +1527,10 @@ const Chatm1 = () => {
                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                       />
                     </svg>
-                    {/* Alternate :: External File link */}
-                    {/* <img src="./../../assetss/assetss/media/heroicons/outline/search.svg" alt="" class="injectable hw-20 mr-2"> */}
+                   
+                    
                     <span>Search</span>
-                  </a>
+                  </a> */}
                   <a
                     className="dropdown-item align-items-center d-flex"
                     href="#"
@@ -1584,33 +1583,12 @@ const Chatm1 = () => {
                     {/* <img src="./../../assetss/assetss/media/heroicons/outline/volume-off.svg" alt="" class="injectable hw-20 mr-2"> */}
                     <span>Mute Notifications</span>
                   </a>
-                  <a
+                 
+                  {/* <a
                     className="dropdown-item align-items-center d-flex"
                     href="#"
                   >
-                    {/* Default :: Inline SVG */}
-                    <svg
-                      className="hw-20 mr-2"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                      />
-                    </svg>
-                    {/* Alternate :: External File link */}
-                    {/* <img src="./../../assetss/assetss/media/heroicons/outline/photograph.svg" alt="" class="injectable hw-20 mr-2"> */}
-                    <span>Wallpaper</span>
-                  </a>
-                  <a
-                    className="dropdown-item align-items-center d-flex"
-                    href="#"
-                  >
-                    {/* Default :: Inline SVG */}
+                   
                     <svg
                       className="hw-20 mr-2"
                       fill="none"
@@ -1624,15 +1602,14 @@ const Chatm1 = () => {
                         d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
                       />
                     </svg>
-                    {/* Alternate :: External File link */}
-                    {/* <img src="./../../assetss/assetss/media/heroicons/outline/archive.svg" alt="" class="injectable hw-20 mr-2"> */}
+                 
                     <span>Archive</span>
-                  </a>
-                  <a
+                  </a> */}
+                  {/* <a
                     className="dropdown-item align-items-center d-flex"
                     href="#"
                   >
-                    {/* Default :: Inline SVG */}
+                   
                     <svg
                       className="hw-20 mr-2"
                       fill="none"
@@ -1646,15 +1623,14 @@ const Chatm1 = () => {
                         d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
                       />
                     </svg>
-                    {/* Alternate :: External File link */}
-                    {/* <img src="./../../assetss/assetss/media/heroicons/outline/trash.svg" alt="" class="injectable hw-20 mr-2"> */}
+                   
                     <span>Delete</span>
-                  </a>
-                  <a
+                  </a> */}
+                  {/* <a
                     className="dropdown-item align-items-center d-flex text-danger"
                     href="#"
                   >
-                    {/* Default :: Inline SVG */}
+                   
                     <svg
                       className="hw-20 mr-2"
                       fill="none"
@@ -1668,10 +1644,9 @@ const Chatm1 = () => {
                         d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
                       />
                     </svg>
-                    {/* Alternate :: External File link */}
-                    {/* <img src="./../../assetss/assetss/media/heroicons/outline/ban.svg" alt="" class="injectable hw-20 mr-2"> */}
+                 
                     <span>Block</span>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </li>
@@ -4178,86 +4153,14 @@ const Chatm1 = () => {
               <h5 className="mb-1">Catherine Richardson</h5>
               <p className="text-muted d-flex align-items-center justify-content-center">
                 {/* Default :: Inline SVG */}
-                <svg
-                  className="hw-18 mr-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
+              
+              
                 {/* Alternate :: External File link */}
                 {/* <img class="injectable mr-1 hw-18" src="./../../assetss/assetss/media/heroicons/outline/location-marker.svg" alt=""> */}
-                <span>San Fransisco, CA</span>
+                
               </p>
               {/* User Quick Options */}
-              <div className="d-flex align-items-center justify-content-center">
-                <div className="btn btn-outline-default btn-icon rounded-circle mx-1">
-                  {/* Default :: Inline SVG */}
-                  <svg
-                    className="hw-20"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
-                    />
-                  </svg>
-                  {/* Alternate :: External File link */}
-                  {/* <img class="injectable hw-20" src="./../../assetss/assetss/media/heroicons/outline/user-add.svg" alt=""> */}
-                </div>
-                <div className="btn btn-primary btn-icon rounded-circle text-light mx-1">
-                  {/* Default :: Inline SVG */}
-                  <svg
-                    className="hw-20"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  </svg>
-                  {/* Alternate :: External File link */}
-                  {/* <img class="injectable hw-20" src="./../../assetss/assetss/media/heroicons/outline/heart.svg" alt=""> */}
-                </div>
-                <div className="btn btn-danger btn-icon rounded-circle text-light mx-1">
-                  {/* Default :: Inline SVG */}
-                  <svg
-                    className="hw-20"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
-                    />
-                  </svg>
-                  {/* Alternate :: External File link */}
-                  {/* <img class="injectable hw-20" src="./../../assetss/assetss/media/heroicons/outline/ban.svg" alt=""> */}
-                </div>
-              </div>
+             
             </div>
             {/* User Profile End */}
             {/* User Information Start */}

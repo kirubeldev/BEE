@@ -1210,14 +1210,16 @@ const Chat = () => {
                 <p className="text-muted">
                   Please select a chat to Start messaging.
                 </p>
-                <button
-                  className="btn btn-outline-primary no-box-shadow"
-                  type="button"
-                  data-toggle=""
-                  data-target=""
-                >
-                  Start a conversation
-                </button>
+                <a href="/chatm1"> <button
+                
+                className="btn btn-outline-primary no-box-shadow"
+                type="button"
+                data-toggle=""
+                data-target=""
+              >
+                Start a conversation
+              </button> </a>
+               
               </div>
             </div>
           </div>
@@ -1428,6 +1430,15 @@ const Chat = () => {
                     <p className="text-muted">
                       Please select a app to Start using it.
                     </p>
+                    <a href="/chatm1"> <button
+                
+                className="btn btn-outline-primary no-box-shadow"
+                type="button"
+                data-toggle=""
+                data-target=""
+              >
+                Start a conversation
+              </button> </a>
                   </div>
                 </div>
               </div>
