@@ -391,7 +391,7 @@ const Article = () => {
               </div>
             </div>
             {/* Popular Tags */}
-            <div className="sidebar-widget_two popular-tags">
+            {/* <div className="sidebar-widget_two popular-tags">
               <div className="widget-content">
                 <h4 className="sidebar-widget_title">Tag</h4>
                 <a href="#">Business</a>
@@ -401,7 +401,7 @@ const Article = () => {
                 <a href="#">Sport</a>
                 <a href="#">Jobs</a>
               </div>
-            </div>
+            </div> */}
             {/* Contact Widget */}
             <div className="sidebar-widget_two contact-widget">
               <div

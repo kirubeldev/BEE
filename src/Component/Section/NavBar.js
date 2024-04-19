@@ -42,11 +42,11 @@ export default function NavBar() {
         >
           {/* Header Top */}
           {!(chat || chatm1 || chatm2 ) && (
-            <div className="header-top">
+            <div className="header-top" style={{width:"120vw"}}>
               <div className="auto-container">
                 <div className="inner-container">
                   <div className="d-flex justify-content-between flex-wrap topp">
-                    <ul className="header-list">
+                    <ul className="header-list" >
                       <li>
                         <span className="icon fas fa-clock fa-fw" />
                         Mon - Sat: 8:00am - 5:00pm
@@ -59,7 +59,7 @@ export default function NavBar() {
                       </li>
                     </ul>
                     {/* Social Box */}
-                    <div className="header-social_box">
+                    <div className="header-social_box" style={{margin:"auto"}}>
                       <a href="https://facebook.com/">
                         <i className="fa-brands fa-facebook-f" />
                       </a>
@@ -70,7 +70,7 @@ export default function NavBar() {
                         <i className="fa-brands fa-youtube" />
                       </a>
                       <a href="https://instagram.com/">
-                        <i className="fa-brands fa-instagram" />
+                        <i className="fa-brands fa-instagram"  />
                       </a>
                     </div>
                   </div>

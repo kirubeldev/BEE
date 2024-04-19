@@ -18,7 +18,7 @@ const Vision = () => {
               </a>
             </h4>
           </div>
-          <div className="service-block_one-text" style={{marginTop:"40px" , textAlign:"justify",paddingBottom:"25px"}}>
+          <div className="service-block_one-text" style={{marginTop:"40px" , textAlign:"justify",paddingBottom:"25px",fontSize:"15px"}}>
        our Vision is to build relationships with and between black-owned businesses globally in order to create an economic Ecosystem of interconnected Black-owned businesses. BEE Channel as a platform will be a central driver of entrepreneurship and economic upward mobility. <br/><br/>
 
           </div>
@@ -39,7 +39,7 @@ const Vision = () => {
               </a>
             </h4>
           </div>
-          <div className="service-block_one-text" style={{marginTop:"40px" , textAlign:"justify", paddingBottom:"10px"}}>
+          <div className="service-block_one-text" style={{marginTop:"40px" , textAlign:"justify", paddingBottom:"10px",fontSize:"15px"}}>
           <p>To create a media platform that produces programming based on the following pillars of production:<br/>
  Promoting Pan-African Upliftment <br/>
  Commanding the Narrative of the Global Black Experienc<br/>
@@ -64,13 +64,13 @@ const Vision = () => {
               </a>
             </h4>
           </div>
-          <div className="service-block_one-text"  style={{marginTop:"40px" , textAlign:"justify"}}>
+          <div className="service-block_one-text"  style={{marginTop:"40px" , textAlign:"justify",fontSize:"14px"}}>
           To utilize the multimedia platforms to present BEE
 Channel content that will become the voice of the
 Purpose Black Nation of followers and members. In so
 doing, within 15 years the BEE Channel will work
 globally to:
-<br/> 1) ECONOMYally Impact 1 Billion Black People
+<br/> 1) Economically Impact 1 Billion Black People
 <br/> 2) Create an ECONOMY Ecosystem of interconnected
 Black-owned businesses
 <br/> 3) Impact 1 Billion Black Enterprises
