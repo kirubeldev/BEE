@@ -34,6 +34,9 @@
 body{
 	background-color: #eaebeae1;
 }
+ .link{
+	margin-top: 32px;
+}
 
 @media screen and (max-width : 900px) {
 
@@ -119,7 +122,7 @@ body{
 }
 
 .slider-one .swiper-slide-active .slider-one_image{
-	-webkit-transform:scale(1.15);
+	-webkit-transform:scale(1.5);
 	-ms-transform:scale(1.15);
 	transform:scale(1.15);
 }
@@ -500,6 +503,13 @@ body{
 	color: var(--white-color);
 }
 
+.service-block_one-inner:hover{
+	background-color: #d7a222 !important;
+	color:white;
+}
+.service-block_one-text p:hover{
+	color:#fff ;
+}
 .service-block_one-text{
 	position: relative;
 	line-height: 26px;
@@ -1221,8 +1231,20 @@ body{
     -ms-transform-origin: right center;
     transform-origin: right center;
 	background-color:rgba(var(--color-two-rgb), 0.70);
+	
 }
-
+@media screen and (max-width : 740px) {
+	
+	.gallery-block_one-overlay{
+		
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center;
+		
+	}
+}
 .gallery-block_one-inner:hover .gallery-block_one-overlay{
 	-webkit-transform: scale(1, 1);
     -ms-transform: scale(1, 1);
@@ -10656,17 +10678,15 @@ body{
 .contact-form-section .image-column .inner-column{
 	position:relative;
 	text-align: center;
-}.myol{
+}.myol{ 
 	background-color:rgba(0, 0, 0, 0.788);
 	/* margin-top: 100px; */
-	width: 145%;
+	width: 149%;
 	margin-left: -53%;
-	height: 100vh;
+	min-height: 100vh;
 	display: block;
-  }
-  .myol ol nav li{
-	border-bottom: 1px white;
-  }
+	}
+ 
 
   /* chat */
 
@@ -10676,10 +10696,8 @@ body{
 
 
 
-  .mynav{
-	position:"relative"
+  .myol i{
+	font-size: 20px;
+	color: #fff;
   }
 
-  .vision{
-
-  }

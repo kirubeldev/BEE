@@ -33,7 +33,7 @@ export default function NavBar() {
   const chatm2 = useMatch("/chatm2");
 
   return (
-    <div className="mynav">
+    <div className="mynav" style={{}}>
       <>
         {/* Main Header */}
         <header
@@ -342,14 +342,14 @@ export default function NavBar() {
                       </span>
                     </div>
                   </div>
-                  <div className="fluid-two_button">
-                    <a className="btn-style-four theme-btn" href="about.html">
-                      <div className="btn-wrap">
-                        <span className="text-two">Login</span>
-                        <span className="text-one">Login</span>
-                      </div>
-                    </a>
-                  </div>
+                  <div className="about-one_button">
+              <a className="btn-style-two theme-btn" href="about.html" >
+                <div className="btn-wrap">
+                  <span className="text-one">Login</span>
+                  <span className="text-two">Login</span>
+                </div>
+              </a>
+            </div>
 
                   {/* End Outer Box */}
                 </div>
@@ -410,6 +410,7 @@ export default function NavBar() {
               background: "#ffffff !important",
               height: "0vh",
               zIndex: 999999999,
+            
               //there is a css in the garden css for the background color
             }}
           >
@@ -420,135 +421,145 @@ export default function NavBar() {
                   aria-hidden="true"
                   style={{
                     position: "absolute ",
-                    right: "66px",
+                    right: "36px",
+                    top:10,
                     fontSize: "37px",
                     color: "white",
                   }}
                   onClick={() => setMenu(false)}
                 ></i>
                 <div style={{ paddingTop: "60px" }}>
-                  <Link
+                <i class="fa fa-home" aria-hidden="true"></i>
+                  <Link className="link"
                     to="/"
                     onClick={() => setMenu(false)}
                     style={{
                       marginLeft: "10px",
                       color: "white",
-                      fontSize: "17px",
+                      fontSize: "15px",
                     }}
                   >
-                    Home
+                Home 
                   </Link>{" "}
-                  <hr style={{ color: "white", zIndex: "10" }} />
-                  <div>
-                    <Link
-                      to="/about"
-                      style={{
-                        marginLeft: "10px",
-                        color: "white",
-                        fontSize: "17px",
-                      }}
-                      onClick={handleServiceClick}
-                    >
-                      About us
-                      <hr />
-                    </Link>
-                    {/* {showNestedList && (
-                          <ol style={{ listStyle: "none", marginTop: "20px" }}>
-                            <li>
-                              <Link
-                              onClick={() => setMenu(false)}
-                                to="/export"
-                                style={{ marginLeft: "20px", color: "white", fontSize:"20px" }}
-                              >
-                                Export
-                              </Link>
-                            </li>
-                            <hr />
-                            <li>
-                              <Link
-                              onClick={() => setMenu(false)}
-                                to="/imp"
-                                style={{ marginLeft: "20px", color: "white" , fontSize:"20px"}}
-                              >
-                                Import
-                              </Link>
-                            </li>
-                          </ol>
-                        )} */}
-                    <hr style={{ color: "white", zIndex: "99" }} />
-                  </div>
+                  <br/>
+                  {/* <hr style={{ color: "white", zIndex: "10" }} /> */}
+                  <br/>
+                  <div style={{marginTop:"5px"}}>
+                  <i class="fa fa-users" aria-hidden="true"></i>
                   <Link
+                  className="link"
+                    onClick={() => setMenu(false)}
+                    to="/about"
+                    style={{
+                      marginLeft: "10px",
+                      color: "white",
+                      fontSize: "15px",
+                    }}
+                  >
+                    About Us
+                  </Link></div>
+                  <br/>
+                  <div style={{marginTop:"5px"}}>
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  <Link
+                  className="link"
                     onClick={() => setMenu(false)}
                     to="/article"
                     style={{
                       marginLeft: "10px",
                       color: "white",
-                      fontSize: "17px",
+                      fontSize: "15px",
                     }}
                   >
                     Article
-                  </Link>
-                  <hr style={{ color: "white", zIndex: "10" }} />
+                  </Link></div>
+                  <br/>
+                  {/* <hr style={{ color: "white", zIndex: "10" }} /> */}
+                 
+                  <div style={{marginTop:"5px"}}>
+                  <i class="fa fa-comment" aria-hidden="true"></i>
                   <Link
+                  className="link"
                     onClick={() => setMenu(false)}
                     to="/chat"
                     style={{
                       marginLeft: "10px",
                       color: "white",
-                      fontSize: "17px",
+                      fontSize: "15px",
                     }}
                   >
                     Chat Room
-                  </Link>
-                  <hr style={{ color: "white", zIndex: "10" }} />
+                  </Link></div>
+                  {/* <hr style={{ color: "white", zIndex: "10" }} /> */}
+                  <br/>
+                  <div style={{marginTop:"5px"}}>
+                  <i class="fa fa-video-camera" aria-hidden="true"></i>
+
                   <Link
+                  className="link"
                     onClick={() => setMenu(false)}
                     to="/movie"
                     style={{
                       marginLeft: "10px",
                       color: "white",
-                      fontSize: "17px",
+                      fontSize: "15px",
                     }}
                   >
                     movie
-                  </Link>
-                  <hr style={{ color: "white", zIndex: "10" }} />
+                  </Link> </div>
+                  <br/>
+                 
+
+                  {/* <hr style={{ color: "white", zIndex: "10" }} /> */}
+                  <div style={{marginTop:"5px"}}>
+                  <i class="fa fa-pied-piper" aria-hidden="true"></i>
                   <Link
+                  className="link"
                     onClick={() => setMenu(false)}
                     to="/blogs"
                     style={{
                       marginLeft: "10px",
                       color: "white",
-                      fontSize: "17px",
+                      fontSize: "15px",
                     }}
                   >
                     Blog
-                  </Link>
-                  <hr style={{ color: "white", zIndex: "10" }} />
+                  </Link></div>
+                  <br/>
+
+                  {/* <hr style={{ color: "white", zIndex: "10" }} /> */}
+                  <div style={{marginTop:"5px"}}>
+                  <i class="fa fa-money" aria-hidden="true"></i>
                   <Link
+                  className="link"
                     onClick={() => setMenu(false)}
                     to="/donation"
                     style={{
                       marginLeft: "10px",
                       color: "white",
-                      fontSize: "17px",
+                      fontSize: "15px",
                     }}
                   >
                     Donation
-                  </Link>
-                  <hr style={{ color: "white", zIndex: "10" }} />
+                  </Link></div>
+                  <br/>
+
+                  {/* <hr style={{ color: "white", zIndex: "10" }} /> */}
+                  <div style={{marginTop:"5px"}}>
+                  <i class="fa fa-phone-square" aria-hidden="true"></i>
                   <Link
+                  className="link"
                     onClick={() => setMenu(false)}
                     to="/contact"
                     style={{
                       marginLeft: "10px",
                       color: "white",
-                      fontSize: "17px",
+                      fontSize: "15px",
                     }}
                   >
                     Contact
-                  </Link>
-                  <hr style={{ color: "white", zIndex: "10" }} />
+                  </Link></div>
+                  {/* <hr style={{ color: "white", zIndex: "10" }} /> */}
                 </div>
               </ol>
 

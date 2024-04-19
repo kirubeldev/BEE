@@ -72,7 +72,7 @@
     --main-color-rgb:223,3,3;
   
     /* #010c3a in decimal RGB */
-    --color-two: rgb(1,12,58);
+    --color-two: rgb(3, 3, 3);
     --color-two-rgb:1,12,58;
     
     /* #666666 in decimal RGB */
@@ -84,7 +84,7 @@
     --color-four-rgb:249,246,241;
 
     /* #101a4d in decimal RGB */
-    --color-five: rgb(16,26,77);
+    --color-five: #d7a222;
     --color-five-rgb:16,26,77;
     
     /* #faf8f4 in decimal RGB */

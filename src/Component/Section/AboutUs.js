@@ -37,7 +37,7 @@ export default function AboutUs() {
               Title here <br /> for about
               </h2>
             </div>
-            <div className="about-one_bold-text" style={{textAlign:"justify"}}>
+            <div className="about-one_bold-text" style={{textAlign:"justify", color:"black"}}>
             This is BEE Channel!  Achieving BLACK ECONOMIC EXCELLENCE. 
 Aiming to improve Africa by breaking from the conventional global narrative, BEE seeks to establish a global network of African voices to expand economic potential. It is a brand-new television network that aims to highlight African-style wealth-building techniques, success stories, and the economic empowerment of the black people. BEE: Promotes financial literacy, entrepreneurship, and economic integration among Black people globally.
 .
@@ -59,7 +59,7 @@ Aiming to improve Africa by breaking from the conventional global narrative, BEE
               </li>
               <li>
                 <i className="arrow fa fa-arrow-circle-right" /> Live sports and
-                TV shows with ultra fast speed
+                TV shows with ultra fast speed      
               </li>
             </ul> */}
             {/* Button Box */}

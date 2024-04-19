@@ -9,155 +9,7 @@ export default function AboutUs() {
         <>
         
         <>
-  <div className="xs-sidebar-group info-group">
-    <div className="xs-overlay xs-bg-black" />
-    <div className="xs-sidebar-widget">
-      <div className="sidebar-widget-container">
-        <div className="close-button">
-          <span className="far fa-times fa-fw" />
-        </div>
-        <div className="sidebar-textwidget">
-          {/* Sidebar Info Content */}
-          <div className="sidebar-info-contents">
-            <div className="content-inner">
-              {/* Title Box */}
-              <div className="title-box">
-                <h5>
-                  Broadband <span>connection</span>
-                </h5>
-                <div className="price">$15 from free economy shipping</div>
-              </div>
-              {/* Empty Cart Box */}
-              <div className="empty-cart-box">
-                {/* No Product */}
-                <div className="no-cart">
-                  <span className="icon far fa-cart-plus fa-fw" />
-                  No products in cart.
-                </div>
-              </div>
-              {/* Lower Box */}
-              <div className="lower-box">
-                <h5>
-                  Popular <span>Suggestions</span>
-                </h5>
-                {/* Post Block */}
-                <div className="post-block">
-                  <div className="inner-box">
-                    <div className="image">
-                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiBH9AR4UGsIehYUhA9NEQ7q4T2__prtxk4D1gJvrLwvMW_0Mz" alt="" />
-                    </div>
-                    <h6>
-                      <a href="#">Free Installation</a>
-                    </h6>
-                    <div className="rating">
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                    </div>
-                    <div className="price-box">$125</div>
-                    <a className="theme-btn bag-btn" href="#">
-                      add to bag
-                    </a>
-                  </div>
-                </div>
-                {/* Post Block */}
-                <div className="post-block">
-                  <div className="inner-box">
-                    <div className="image">
-                      <img src="./assets/images/resource/post-thumb-2.jpg" alt="" />
-                    </div>
-                    <h6>
-                      <a href="#">Ultra Fast Connect</a>
-                    </h6>
-                    <div className="rating">
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                    </div>
-                    <div className="price-box">$205</div>
-                    <a className="theme-btn bag-btn" href="#">
-                      add to bag
-                    </a>
-                  </div>
-                </div>
-                {/* Post Block */}
-                <div className="post-block">
-                  <div className="inner-box">
-                    <div className="image">
-                      <img src="./assets/images/resource/post-thumb-3.jpg" alt="" />
-                    </div>
-                    <h6>
-                      <a href="#">4K and 8K Quality</a>
-                    </h6>
-                    <div className="rating">
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                      <span className="fa fa-star" />
-                    </div>
-                    <div className="price-box">$25</div>
-                    <a className="theme-btn bag-btn" href="#">
-                      add to bag
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  {/* About Sidebar */}
-  <div className="about-sidebar">
-    <div className="gradient-layer" />
-    {/* Close Button */}
-    <div className="close-sidebar-widget close-button">
-      <span className="flaticon-multiply" />
-    </div>
-    <div className="sidebar-inner">
-      <div className="upper-box">
-        <div className="image">
-          <img src="./assets/images/resource/about-1.jpg" alt="" />
-        </div>
-        <div className="content-box">
-          <h3>
-            About <span>Monic</span>
-          </h3>
-          <div className="text">
-            Many desktop Wifi packages &amp; web page editors now use Ipsum
-            budgets dipiscing
-          </div>
-          <ul className="about-one_list">
-            <li>Internet with 50 Mbps</li>
-            <li>Night Turbo-Speed</li>
-            <li>WiFi router &amp; prevention</li>
-            <li>Unlimited devices</li>
-          </ul>
-        </div>
-      </div>
-      {/* Social Box */}
-      <div className="social-box">
-        <a href="https://facebook.com/">
-          <i className="fa-brands fa-facebook-f" />
-        </a>
-        <a href="https://twitter.com/">
-          <i className="fa-brands fa-twitter" />
-        </a>
-        <a href="https://youtube.com/">
-          <i className="fa-brands fa-youtube" />
-        </a>
-        <a href="https://instagram.com/">
-          <i className="fa-brands fa-instagram" />
-        </a>
-      </div>
-    </div>
-  </div>
+ 
   {/* End About Sidebar */}
   {/* Page Title */}
   <section
@@ -193,23 +45,23 @@ export default function AboutUs() {
   </section>
   {/* End Fiber One */}
   {/* Fluid Two */}
-  <section className="fluid-two">
+  <section className="fluid-two" >
     <div className="outer-container clearfix">
       {/* Left Box */}
       <div className="left-box clearfix">
         <div className="left-box_inner">
           <div className="fluid-one_color-layer" />
-          {/* Sec Title */}
+         
           <div className="sec-title">
             <div className="sec-title_title tx-split-text split-in-up">
               Who we are
             </div>
             <h2 className="sec-title_heading tx-split-text split-in-up">
-            Title for  <br /> About
+            Title for  About
             </h2>
           </div>
           <div className="fluid-two_feature" style={{textAlign:"justify"}}>
-            <div className="fluid-two_feature-icon flaticon-wifi-routr" />
+            
             change the content here <br/>
             It is with great pleasure and excitement that we introduce to you the launch of our newest media channel, the Black Economy Excellence Channel (BBE Channel). The BEE Channel will be broadcasting globally in English with a mission to become the global nexus for African voices, promoting economic empowerment, commanding the narrative of the Global Black experience, and encouraging Africa-to-Africa collaboration. 
           </div>

@@ -6,10 +6,11 @@ export default function Footer() {
   
   const chatm1 = useMatch("/chatm1");
   const chatm2 = useMatch("/chatm2");
+  const movie = useMatch("/movie");
 
   return (
     <>
-         {!(chat || chatm1 || chatm2 ) && (
+         {!(chat || chatm1 || chatm2 || movie) && (
         <>
           <section className="cta-three">
             <div className="auto-container">
