@@ -6,7 +6,7 @@ export default function NavBar() {
   const [menu, setMenu] = useState(false);
 
   useEffect(() => {
-    window.scroll(0, 0);
+    window.scrollTo(0, 0);
   }, []);
 
   const hamburger = () => {

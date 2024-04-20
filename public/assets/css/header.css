@@ -1474,7 +1474,9 @@ html:not(.body-menu-opened) .hamburger .bottom-bun {
 .main-header .sticky-header .navbar-header{
 	display:none;
 }
-
+@media screen and (max-width : 740px) {
+.navbar-header{	display:none;}
+}
 .main-header .outer-box{
 	position: relative;
 }

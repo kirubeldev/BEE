@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { NavLink } from "react-router-dom";
 
 const Chat = () => {
   return (
@@ -6,7 +7,7 @@ const Chat = () => {
       {/* <NavBar /> */}
       <div className="main-layout">
         {/* Navigation Start */}
-        <div className="navigation navbar navbar-light bg-primary">
+        <div className="navigation sidebarr navbar navbar-light bg-primary">
           {/* Logo Start */}
           <a
             className="d-none d-xl-block bg-light rounded p-1"
@@ -25,7 +26,11 @@ const Chat = () => {
               </g>{" "}
             </svg> */}
             {/* Alternate :: External File link */}
-            <img class="injectable" src="./../../assetss/assetss/media/logo.png" alt="" style={{borderRadius:"50%" , backgroundColor:"transparent"}}/> 
+            <NavLink to="/">
+            <img class="injectable" src="./../../assetss/assetss/media/logo.png" alt="" style={{ backgroundColor:"transparent"}}/> 
+
+
+            </NavLink>
           </a>
           {/* Logo End */}
           {/* Main Nav Start */}
@@ -35,9 +40,12 @@ const Chat = () => {
             role="tablist"
           >
             {/* Chats Tab Start */}
+            <NavLink to="#" style={{ color: "#fff", fontSize: "18px", marginBottom: "14px", padding: "10px" }}>
+  <i className="fa fa-home" aria-hidden="true" onClick={()=>window.location.href = '/'}></i>
+</NavLink>
             <li className="nav-item">
               <a
-                className="nav-link p-0 py-xl-3 active"
+                className="nav-link p-0 py-xl-3 "
                 id="chats-tab"
                 href="#chats-content"
                 title="Chats"
@@ -54,10 +62,10 @@ const Chat = () => {
                     strokeLinejoin="round"
                     strokeWidth={2}
                     d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
-                  />
+                style={{color:"white"}}  />
                 </svg>
                 {/* Alternate :: External File link */}
-                {/* <img class="injectable hw-24" src="./../../assetss/assetss/media/heroicons/outline/chat-alt-2.svg" alt="Chat icon"> */}
+                {/* <img class="injectable hw-24" src="./../../assetss/assetss/media/heroicons/outline/chat-alt-2.svg" alt="Chat icon"/> */}
               </a>
             </li>
             {/* Chats Tab End */}
@@ -87,7 +95,7 @@ const Chat = () => {
                     strokeLinejoin="round"
                     strokeWidth={2}
                     d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
+                    style={{color:"white"}}  />
                 </svg>
                 {/* Alternate :: External File link */}
                 {/* <img class="injectable hw-24" src="./../../assetss/assetss/media/heroicons/outline/user-circle.svg" alt="Profile icon"> */}
@@ -95,6 +103,11 @@ const Chat = () => {
             </li>
             {/* Profile Tab End */}
           </ul>
+          <div class="tooltip-container">
+           
+          <i class="fa fa-sign-out" aria-hidden="true"  style={{color:"#fff", fontSize:"20px" }}></i> 
+          <br /> <span className="signout" style={{color:"#fff"}}> Sign Out </span>
+</div>
           {/* Main Nav End */}
         </div>
         {/* Navigation End */}
@@ -226,6 +239,7 @@ const Chat = () => {
                           </div>
                         </li>
                       </ul>
+                      
                     </div>
                     {/* Sidebar Header Start */}
 
