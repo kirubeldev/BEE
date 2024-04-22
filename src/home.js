@@ -13,7 +13,7 @@ import Vision from './Component/Section/Vision';
 
 const Home = () => {
   return (
-    <div style={{backgroundColor:"#fff"}}>
+    <div style={{backgroundColor:"#fff",maxWidth:"100%"}}>
         
         <HeroSection/>
         <Vision />

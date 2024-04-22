@@ -67,20 +67,8 @@ export default function Footer() {
             </div>
           </section>
           <footer className="main-footer">
-            <div
-              className="footer_pattern"
-              style={{
-                backgroundImage:
-                  "url(./assets/images/background/footer-pattern-1.png)",
-              }}
-            />
-            <div
-              className=""
-              style={{
-                backgroundImage:
-                  "url(./assets/images/background/footer-pattern-2.png)",
-              }}
-            />
+          
+           
             <div className="auto-container">
               <div className="inner-container">
                 {/* Widgets Section */}
@@ -323,9 +311,7 @@ export default function Footer() {
             {/* End Color Palate / Color Switcher */}
             {/* End PageWrapper */}
             {/* Scroll To Top */}
-            <div className="scroll-to-top scroll-to-target" data-target="html">
-              <span className="fas fa-arrow-up fa-fw" />
-            </div>
+         
           </>
         </>
       )}

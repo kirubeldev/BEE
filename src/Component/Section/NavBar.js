@@ -33,7 +33,7 @@ export default function NavBar() {
   const chatm2 = useMatch("/chatm2");
 
   return (
-    <div className="mynav" style={{}}>
+    <div className="mynav" style={{maxWidth:"100%"}}>
       <>
         {/* Main Header */}
         <header
@@ -400,18 +400,18 @@ export default function NavBar() {
         {/* Sidebar Cart Item */}
 
         {menu && (
-          <nav
+            <nav
+            className="mobnav"
             style={{
-              position: "fixed",
               borderRadius: "10px 10px 0 0px",
-              top: "0",
+              top: 0,
               right: 0,
+              bottom:0,
               width: "70%",
               background: "#ffffff !important",
-              height: "0vh",
+              height: "0vh !important", // Add !important
               zIndex: 999999999,
-            
-              //there is a css in the garden css for the background color
+              position: "fixed !important", // Add !important
             }}
           >
             <div className="myol">

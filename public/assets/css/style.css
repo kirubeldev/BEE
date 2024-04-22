@@ -29,17 +29,50 @@
 ====================================================================
 	Slider One
 ====================================================================
-
 ***/
-body{
-	background-color: #eaebeae1; 
-	width: 100vw;
-	/* overflow: hidden; */
+
+ @media (max-width: 768px) {
+   body {
+   max-width: 100% !important;
+   overflow-x: hidden;
+    max-height: 100vh;
+    margin: 0 !important;
+    padding: 0 !important;
+   
+   
+ 
+  }
 }
+
+.mobnav{
+	position: fixed !important;
+	
+}
+@media screen and (min-width : 720px) {
+	html {
+	transform: scale(0.89);
+	transform-origin: top left;
+	width: 111.11111%;
+	
+	height: 111.11111%;
+	
+  }
+  html, body {
+	width: 110%;
+	/* height: 110%; */
+
+	padding: 0;
+	
+  }}
+ 
  .link{
 	margin-top: 32px;
 }
-
+/* @/media screen and (min-width :720px) {
+	.slider-one_content-column{
+	
+	}
+	} */
 @media screen and (max-width : 900px) {
 
 .navbar-collapse{
@@ -67,8 +100,6 @@ body{
 	@media screen and (min-width : 740px) {
 		.mobile-nav-toggler{
 			display: none !important;
-		}.mynav{
-			max-width: 100vw;
 		}}
 
 
@@ -10694,6 +10725,8 @@ ul li a.active  {
 	margin-left: -53%;
 	min-height: 100vh;
 	display: block;
+	
+	
 	}
  
 
