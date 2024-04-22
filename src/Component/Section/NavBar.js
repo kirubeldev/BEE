@@ -42,7 +42,7 @@ export default function NavBar() {
         >
           {/* Header Top */}
           {!(chat || chatm1 || chatm2 ) && (
-            <div className="header-top" style={{width:"120vw"}}>
+            <div className="header-top" style={{width:"140vw"}}>
               <div className="auto-container">
                 <div className="inner-container">
                   <div className="d-flex justify-content-between flex-wrap topp">
