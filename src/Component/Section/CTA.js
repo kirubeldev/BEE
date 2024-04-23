@@ -2,7 +2,7 @@ import React from 'react'
 import bgi from "./img/bgi.jpg"
 export default function CTA() {
   return (
-    <div><section
+    <div ><section
     className="cta-one"
     style={{ backgroundImage: `url(${bgi})`  , backgroundSize: "cover" , backgroundPosition:"center center"}}
   >
@@ -20,7 +20,7 @@ export default function CTA() {
         <div className="sec-title_title tx-split-text split-in-right">
         
         </div>
-        <h2 className="sec-title_heading tx-split-text split-in-right">
+        <h2>
         THE FUTURE OF BEE
         </h2>
       </div>

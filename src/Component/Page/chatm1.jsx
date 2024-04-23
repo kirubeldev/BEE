@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 const Chatm1 = () => {
   return (
     <div> 
-        <div className="main-layout" style={{maxHeight:"100vh" , paddingBottom:"-200px"}}>
+        <div className="main-layout chat" style={{maxHeight:"100vh" , paddingBottom:"-200px" }}>
   {/* Navigation Start */} 
   <div className="navigation sidebarr navbar navbar-light bg-primary"style={{ paddingBottom:"-200px" , backgroundColor:"#d7a222 !important"}}>
           {/* Logo Start */}

@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 
 const Chat = () => {
   return (
-    <div style={{maxHeight:"100vh",overflow:"hidden"}}> 
+    <div  className="chat"> 
       {/* <NavBar /> */}
-      <div className="main-layout">
+      <div className="main-layout" >
         {/* Navigation Start */}
         <div className="navigation sidebarr navbar navbar-light bg-primary">
           {/* Logo Start */}

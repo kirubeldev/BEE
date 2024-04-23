@@ -44,7 +44,7 @@ export default function NavBar() {
           {!(chat || chatm1 || chatm2 ) && (
             <div className="header-top" style={{width:"140vw"}}>
               <div className="auto-container">
-                <div className="inner-container">
+                <div className="inner-container inner">
                   <div className="d-flex justify-content-between flex-wrap topp">
                     <ul className="header-list" >
                       <li>
@@ -344,7 +344,7 @@ export default function NavBar() {
                   </div>
                   <div className="about-one_button">
               <a className="btn-style-two theme-btn" href="about.html" >
-                <div className="btn-wrap">
+                <div className="btn-wrap" style={{marginLeft:"-30px"}}>
                   <span className="text-one">Login</span>
                   <span className="text-two">Login</span>
                 </div>
@@ -421,7 +421,7 @@ export default function NavBar() {
                   aria-hidden="true"
                   style={{
                     position: "absolute ",
-                    right: "36px",
+                    right: "56px",
                     top:10,
                     fontSize: "37px",
                     color: "white",
@@ -601,12 +601,10 @@ export default function NavBar() {
                     LOCATION :
                   </b>
                   Addis Ababa,
-                  <br /> Ethiopia, Sengatera Negadwoch Hibret BLDG,
-                  <br />
+                  <br /> Ethiopia, Sengatera Negadwoch Hibret BLDG,<br /> 
+           
                   5th Floor
-                  <br />
-                  <br />
-                  <a
+                  <br /><a
                     href="https://facebook.com/"
                     style={{
                       marginRight: "20px",
@@ -663,6 +661,8 @@ export default function NavBar() {
                     />
                     <span className="sr-only">Instagram</span>
                   </a>
+                  <br />
+                  
                 </li>
               </div>
             </div>

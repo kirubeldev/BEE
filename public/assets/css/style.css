@@ -57,14 +57,26 @@
 	height: 111.11111%;
 	
   }
-  html, body {
-	width: 110%;
+   body {
+	width: 103%;
 	/* height: 110%; */
 
-	padding: 0;
+	padding-bottom: -1000;
 	
   }}
  
+/* @media screen and (min-width : 720px) {
+.chat{
+	transform: scale(1.09);
+	transform-origin: center left;
+	width: 101.2%;
+	
+	height: 100vh !important;
+	overflow: scroll;
+} 
+} */
+  
+
  .link{
 	margin-top: 32px;
 }
@@ -96,15 +108,17 @@
 	}
 }
 @media screen and (max-width : 740px) {
+	.myol{
+		display:none;
+	}
 	}
 	@media screen and (min-width : 740px) {
 		.mobile-nav-toggler{
 			display: none !important;
-		}}
+		}
+	}
 
 
-
-	
 .gradient-custom {
 	/* fallback for old browsers */
 	background: #fccb90;
@@ -195,6 +209,14 @@
 	border-color: var(--main-color);
 	background-color: var(--main-color);
 }
+
+@media screen and (max-width: 720px) {
+.header-lower{
+	
+	max-width: 100vw !important;
+}
+  }
+
 
 .slider-one .main-slider_button-next{
 	position: absolute;
@@ -2003,7 +2025,11 @@ ul li a.active  {
 	padding: 60px 70px 30px;
 	background-color: var(--main-color);
 }
-
+@media screen and (max-width: 720px) {
+	.inner{
+		display: none;
+	}
+}
 .cta-three .column{
 	position: relative;
 	margin-bottom: var(--margin-bottom-30);
@@ -10721,7 +10747,7 @@ ul li a.active  {
 }.myol{ 
 	background-color:rgba(0, 0, 0, 0.788);
 	/* margin-top: 100px; */
-	width: 149%;
+	width: 139%;
 	margin-left: -53%;
 	min-height: 100vh;
 	display: block;

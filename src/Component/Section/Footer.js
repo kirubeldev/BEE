@@ -173,7 +173,7 @@ export default function Footer() {
                             <ul className="footer-contact_list">
                               <li>
                                 <span className="icon fas fa-map-marker-alt fa-fw" />
-                                Lideta Sub city, Sengetera Negadewoch Union
+                                Lideta Sub city, Sengetera Negadewoch Union <br/>
                                 Bldg, 5th Floor Addis Ababa, Ethiopia
                               </li>
                               <li>
@@ -183,10 +183,7 @@ export default function Footer() {
                               <li>
                                 <span className="icon fas fa-phone fa-fw" />
                                 +(251)-942609556
-                              </li>
-                            </ul>
-                            {/* Social Box */}
-                            <div className="footer_socials">
+                              </li> <div className="footer_socials">
                               <a href="https://facebook.com/">
                                 <i className="fa-brands fa-facebook-f" />
                               </a>
@@ -200,6 +197,9 @@ export default function Footer() {
                                 <i className="fa-brands fa-instagram" />
                               </a>
                             </div>
+                            </ul>
+                            {/* Social Box */}
+                           
                           </div>
                         </div>
                       </div>
