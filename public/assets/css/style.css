@@ -49,7 +49,7 @@
 	
 }
 @media screen and (min-width : 720px) {
-	html {
+	html  {
 	transform: scale(0.89);
 	transform-origin: top left;
 	width: 111.11111%;
@@ -7323,12 +7323,12 @@ ul li a.active  {
 	
 }
 
-.styled-pagination li a:hover,
+/* .styled-pagination li a:hover,
 .styled-pagination li a.active{
 	color:var(--white-color);
 	border-color:var(--main-color);
 	background-color:var(--main-color);
-}
+} */
 
 /* Sidebar Widget Two */
 

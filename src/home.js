@@ -10,10 +10,11 @@ import News from './Component/Section/News'
 
 import AboutUs from './Component/Section/AboutUs';
 import Vision from './Component/Section/Vision';
+import { dividerClasses } from '@mui/material';
 
 const Home = () => {
   return (
-    <div style={{backgroundColor:"#fff",maxWidth:"100%"}}>
+    <div>
         
         <HeroSection/>
         <Vision />
@@ -24,7 +25,7 @@ const Home = () => {
   <Show/>
   <Tvprog/>
   <News/>
-    </div>
+      </div>
   )
 }
 

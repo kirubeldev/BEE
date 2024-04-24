@@ -82,7 +82,7 @@ export default function NavBar() {
           {!(chat  || chatm1||chatm2 ) && (
             <div
               className="header-lower"
-              style={{ position: movie ? "sticky" : "", top: 0 }}
+              style={{ position: movie ? "sticky" : "", top: 0, }}
             >
               <div className="auto-container">
                 <div className="inner-container d-flex align-items-center justify-content-between">
