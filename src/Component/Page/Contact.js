@@ -5,7 +5,7 @@ import Footer from '../Section/Footer'
 
 export default function Contact() {
   return (
-    <div>
+    <div className='contac'> 
       
       
   <section

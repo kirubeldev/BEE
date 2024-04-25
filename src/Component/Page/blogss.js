@@ -29,7 +29,7 @@ const Blogs = () => {
     
     
       return (
-        <div>
+        <div className='blogss'>
             <>
     
             <> <section

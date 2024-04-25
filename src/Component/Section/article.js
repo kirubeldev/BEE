@@ -16,7 +16,7 @@ const Article = () => {
       authorName: "Sophia Johnson",
       articleTitle: "The Rise of Artificial Intelligence",
       description:
-        "Artificial intelligence is rapidly transforming industries such as hArtificialrtificial intelligence is rapidly transforming industries such as hArtificialrtificial intelligence is rapidly transforming industries such as hArtificialrtificial intelligence is rapidly transforming industries such as hArtificial intelligence is rapidly transforming industries such as healthcare, finance, and transportation, with applications ranging from virtual assistants to autonomous vehicles.",
+        "Artificial intelligence is rapidly transforming industries such as hArtificialrtificial Artificial intelligence is rapidly transforming industries such as hArtificialrtificial Artificial intelligence is rapidly transforming industries such as hArtificialrtificial Artificial intelligence is rapidly transforming industries such as hArtificialrtificial Artificial intelligence is rapidly transforming industries such as hArtificialrtificial Artificial intelligence is rapidly transforming industries such as hArtificialrtificial Artificial intelligence is rapidly transforming industries such as hArtificialrtificial Artificial intelligence is rapidly transforming industries such as hArtificialrtificial Artificial intelligence is rapidly transforming industries such as hArtificialrtificial Artificial intelligence is rapidly transforming industries such as hArtificialrtificial Artificial intelligence is rapidly transforming industries such as hArtificialrtificial Artificial intelligence is rapidly transforming industries such as hArtificialrtificial Artificial intelligence is rapidly transforming industries such as hArtificialrtificial Artificial intelligence is rapidly transforming industries such as hArtificialrtificial Artificial intelligence is rapidly transforming industries such as hArtificialrtificial Artificial intelligence is rapidly transforming industries such as hArtificialrtificial Artificial intelligence is rapidly transforming industries such as hArtificialrtificial Artificial intelligence is rapidly transforming industries such as hArtificialrtificial Artificial intelligence is rapidly transforming industries such as hArtificialrtificial intelligence is rapidly transforming industries such as hArtificialrtificial intelligence is rapidly transforming industries such as hArtificialrtificial intelligence is rapidly transforming industries such as hArtificial intelligence is rapidly transforming industries such as healthcare, finance, and transportation, with applications ranging from virtual assistants to autonomous vehicles.",
     },
     {
       id: "2",
@@ -244,9 +244,61 @@ const Article = () => {
 
   // Function to handle pagination
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const [likes, setLikes] = useState(Array(currentItems.length).fill(0));
+  const [isLiked, setIsLiked] = useState(Array(currentItems.length).fill(false));
 
+  // Function to handle like button click for a specific article
+  const handleLike = (index) => {
+    const newLikes = [...likes];
+    const newIsLiked = [...isLiked];
+
+    if (!newIsLiked[index]) {
+      newLikes[index]++;
+      newIsLiked[index] = true;
+    } else {
+      newLikes[index] = 0; // Set likes to 0 if unliking
+      newIsLiked[index] = false;
+    }
+
+    setLikes(newLikes);
+    setIsLiked(newIsLiked);
+  };
+  const [comments, setComments] = useState(Array(currentItems.length).fill(0));
+  const [commentText, setCommentText] = useState("");
+  const [showCommentInput, setShowCommentInput] = useState(Array(currentItems.length).fill(false));
+  const handleComment = (index) => {
+    // Toggle the visibility of comment input
+    const newShowCommentInput = [...showCommentInput];
+    newShowCommentInput[index] = !newShowCommentInput[index];
+    setShowCommentInput(newShowCommentInput);
+  };
+
+  // Function to handle submitting a comment for a specific article
+  const handleSubmitComment = (index) => {
+    if (!commentText.trim()) {
+      // Alert user if comment input is empty
+      alert("Please write something before submitting.");
+      return;
+    }
+    // Increment comment count and clear the input field after submission
+    const newComments = [...comments];
+    newComments[index]++;
+    setComments(newComments);
+    setCommentText("");
+    // Hide the comment input field after submission
+    const newShowCommentInput = [...showCommentInput];
+    newShowCommentInput[index] = false;
+    setShowCommentInput(newShowCommentInput);
+  };
+
+  const [showSocialMedia, setShowSocialMedia] = useState(false);
+
+  const handleShareClick = (socialMedia) => {
+    // Logic to handle sharing on the selected social media platform
+    alert(`Sharing on ${socialMedia}`);
+  };
   return (
-    <div>
+    <div className="articlee">
       <>
         {/* About Sidebar */}
         <div className="about-sidebar">
@@ -316,66 +368,127 @@ const Article = () => {
                   {/* News Block */}
                   <div>
                     {/* Article blocks */}
-                    {currentItems.map((Article, index) => (
-                      <div
-                        className="news-block_one"
-                        key={index}
-                        style={{ paddingtop: "30px" }}
-                      >
-                        <div
-                          className="news-block_one-inner"
-                          style={{ marginBottom: "90px" }}
-                        >
-                          <div className="news-block_one-image">
-                            <div className="news-block_one-date">
-                              26 <span>oct</span>
-                            </div>
-                            <a href="blog-detail.html">
-                              <img
-                                src={Article.articleimg}
-                                alt=""
-                                style={{
-                                  objectFit: "cover",
-                                  maxHeight: "550px",
-                                }}
-                              />
-                            </a>
-                            <div className="news-block_one-author">
-                              <div className="news-block_one-author_image">
-                                <img src={Article.authorImg} alt="" />
-                              </div>
-                              {Article.authorName}
-                            </div>
-                          </div>
-                          <div className="news-block_one-content">
-                            <h4 className="news-block_one-heading">
-                              <a href="">{Article.articleTitle}</a>
-                            </h4>
+                    {currentItems.map((Article) => (
+  <div className="news-block_one" key={Article.id} style={{ paddingTop: "30px" }}>
+    <div className="news-block_one-inner" style={{ marginBottom: "90px" }}>
+      <div className="news-block_one-image">
+        <div className="news-block_one-date">
+          26 <span>oct</span>
+        </div>
+        <a href="blog-detail.html">
+          <img
+            src={Article.articleimg}
+            alt=""
+            style={{ objectFit: "cover", maxHeight: "550px" }}
+          />
+        </a>
+        <div className="news-block_one-author">
+          <div className="news-block_one-author_image">
+            <img src={Article.authorImg} alt="" />
+          </div>
+          {Article.authorName}
+        </div>
+      </div>
+      <div className="news-block_one-content">
+        <h4 className="news-block_one-heading">
+          <a href="">{Article.articleTitle}</a>
+        </h4>
+        <div className="news-block_one-text">
+          {Article.showFullDescription || Article.description.length <= 220 ? (
+            Article.description
+          ) : (
+            <>
+              {`${Article.description.slice(0, 320)}... `}
+              <button
+                style={{
+                  margin: "5px 5px",
+                  padding: "5px 5px",
+                  backgroundColor: "#d7a222",
+                }}
+                onClick={() => handleReadMore(Article.id)}
+              >
+                Read More
+              </button>
+            </>
+          )}
+        </div>
+        <div style={{ marginTop: "30px", display: "flex", alignItems: "center" }}>
+          {/* Like button with like count */}
+          <div style={{ display: "flex", alignItems: "center", marginRight: "30px" }}>
+            <span style={{ fontSize: "20px", marginRight: "5px" }}>{likes[Article.id]}</span>
+            <i
+              onClick={() => handleLike(Article.id)}
+              className="fa-regular fa-heart"
+              style={{
+                fontSize: "24px",
+                cursor: "pointer",
+                backgroundColor: "red",
+                color: "black",
+                borderRadius: "100%",
+              }}
+            ></i>
+          </div>
+          
+          {/* Comment button with comment count */}
+          <div style={{ display: "flex", alignItems: "center", marginRight: "10px" }}>
+            <span style={{ fontSize: "20px", marginRight: "5px" }}>{comments[Article.id]}</span>
+            <i
+              onClick={() => handleComment(Article.id)}
+              className="fa-regular fa-comment"
+              style={{
+                fontSize: "24px",
+                cursor: "pointer",
+              }}
+            ></i>
+          </div>
 
-                            <div className="news-block_one-text">
-                              {Article.showFullDescription ||
-                              Article.description.length <= 220 ? (
-                                Article.description
-                              ) : (
-                                <>
-                                  {`${Article.description.slice(0, 320)}... `}
-                                  <button
-                                    style={{
-                                      margin: "5px 5px",
-                                      padding: "5px 5px",
-                                      backgroundColor: "#d7a222",
-                                    }}
-                                    onClick={() => handleReadMore(index)}
-                                  >
-                                    Read More
-                                  </button>
-                                </>
-                              )}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
+          {/* Input field for writing a comment */}
+          {showCommentInput[Article.id] && (
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <input
+                type="text"
+                value={commentText}
+                onChange={(e) => setCommentText(e.target.value)}
+                placeholder="Write a comment..."
+                style={{ padding: "5px", marginRight: "10px" }}
+              />
+              {/* Submit button for submitting the comment */}
+              <button
+                onClick={() => handleSubmitComment(Article.id)}
+                style={{ padding: "5px 10px", backgroundColor: "#d7a222", color: "white", border: "none", borderRadius: "5px", cursor: "pointer" }}
+              >
+                Submit
+              </button>
+            </div>
+          )}
+
+          {/* Share button */}
+          <div style={{ marginLeft: "auto", marginRight: "10px" }}>
+            <i
+              className="fa-solid fa-share-nodes"
+              onMouseEnter={() => setShowSocialMedia(true)}
+              onMouseLeave={() => setShowSocialMedia(false)}
+              style={{
+                fontSize: "24px",
+                cursor: "pointer",
+              }}
+            ></i>
+            {/* Social media options */}
+            {showSocialMedia && (
+              <div className="social-media-options">
+                <button onClick={() => handleShareClick("Facebook")}>Facebook</button>
+                <button onClick={() => handleShareClick("Twitter")}>Twitter</button>
+                <button onClick={() => handleShareClick("Instagram")}>Instagram</button>
+                {/* Add more social media options as needed */}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+))}
+
 
                     {/* Pagination */}
                     <ul className="styled-pagination text-center">

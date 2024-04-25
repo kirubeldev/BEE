@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function News() {
   return (
-    <div>
+    <div className='news'>
       <section
   className="news-one"
   style={{ backgroundImage: "url(./assets/images/background/news-one_pattern.png)" }}

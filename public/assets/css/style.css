@@ -38,10 +38,9 @@
     max-height: 100vh;
     margin: 0 !important;
     padding: 0 !important;
-   
-   
- 
+
   }
+  .category-one{margin-bottom: 330px;}
 }
 
 .mobnav{
@@ -49,32 +48,42 @@
 	
 }
 @media screen and (min-width : 720px) {
-	html  {
+	.about-one , .abou, .blogss , .articlee, .contac , .testimonial-one ,.gallery-one ,.news-one  {
 	transform: scale(0.89);
 	transform-origin: top left;
 	width: 111.11111%;
 	
-	height: 111.11111%;
 	
-  }
-   body {
-	width: 103%;
+	
+  }.news{
+	margin-bottom: -200px;
+  }.articlee{
+	margin-bottom: -600px;
+  }}
+
+
+ 
+   .mynav {
+	width: 143%;
 	/* height: 110%; */
 
-	padding-bottom: -1000;
 	
-  }}
+	
+  }
+  .mynav{
+	font-size: 14px !important;
+  }
  
-/* @media screen and (min-width : 720px) {
+@media screen and (min-width : 720px) {
 .chat{
-	transform: scale(1.09);
+	transform: scale(1);
 	transform-origin: center left;
-	width: 101.2%;
+	width: 100%;
 	
-	height: 100vh !important;
-	overflow: scroll;
+	height: 99.6vh !important;
+
 } 
-} */
+}
   
 
  .link{
@@ -115,6 +124,9 @@
 	@media screen and (min-width : 740px) {
 		.mobile-nav-toggler{
 			display: none !important;
+		}
+		.slider-one_content-column{
+			margin-left: 100px;
 		}
 	}
 

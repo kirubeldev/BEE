@@ -9,7 +9,7 @@ export default function Footer() {
   const movie = useMatch("/movie");
 
   return (
-    <>
+    <div className="footer">
          {!(chat || chatm1 || chatm2 || movie) && (
         <>
           <section className="cta-three">
@@ -107,16 +107,26 @@ export default function Footer() {
                                 <a href="#">About</a>
                               </li>
                               <li>
-                                <a href="#">Contact</a>
+                                <a href="/About">About Us</a>
                               </li>
                               <li>
-                                <a href="#">Our Packages</a>
+                                <a href="article">Article</a>
                               </li>
                               <li>
-                                <a href="#">Services</a>
+                                <a href="/chat">Chat Room</a>
                               </li>
                               <li>
-                                <a href="#">News</a>
+                                <a href="/blog">Blog</a>
+                              </li>
+                              <li>
+                                <a href="/movie">TV Programs</a>
+                              </li>
+                              <li>
+                                <a href="gofundme.com">Donation</a>
+
+                              </li>
+                              <li>
+                                <a href="Contact">Contact</a>
                               </li>
                             </ul>
                           </div>
@@ -315,6 +325,6 @@ export default function Footer() {
           </>
         </>
       )}
-    </>
+    </div>
   );
 }

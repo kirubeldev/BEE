@@ -42,10 +42,10 @@ export default function NavBar() {
         >
           {/* Header Top */}
           {!(chat || chatm1 || chatm2 ) && (
-            <div className="header-top" style={{width:"140vw"}}>
+            <div className="header-top" style={{width:"140%"}} >
               <div className="auto-container">
                 <div className="inner-container inner">
-                  <div className="d-flex justify-content-between flex-wrap topp">
+                  <div className="d-flex w-full justify-content-between flex-wrap topp">
                     <ul className="header-list" >
                       <li>
                         <span className="icon fas fa-clock fa-fw" />
@@ -58,7 +58,7 @@ export default function NavBar() {
                         </a>
                       </li>
                     </ul>
-                    {/* Social Box */}
+                 
                     <div className="header-social_box" style={{margin:"auto"}}>
                       <a href="https://facebook.com/">
                         <i className="fa-brands fa-facebook-f" />
@@ -344,7 +344,7 @@ export default function NavBar() {
                   </div>
                   <div className="about-one_button">
               <a className="btn-style-two theme-btn" href="about.html" >
-                <div className="btn-wrap" style={{marginLeft:"-30px"}}>
+                <div className="btn-wrap" >
                   <span className="text-one">Login</span>
                   <span className="text-two">Login</span>
                 </div>

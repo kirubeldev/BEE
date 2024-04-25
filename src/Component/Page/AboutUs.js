@@ -3,7 +3,7 @@ import Footer from '../Section/Footer'
 
 export default function AboutUs() {
   return (
-    <div>
+    <div className='abou' style={{marginBottom:"-400px"}}>
       
       
         <>

@@ -834,8 +834,8 @@ img{
 	font-weight:700;
     overflow: hidden;
 	text-align:center;
-    border-radius: 0px;
-	padding: 20px 40px;
+    border-radius: 10px;
+	padding: 17px 30px;
 	display:inline-block;
     letter-spacing: 1px;
 	color: var(--white-color);
