@@ -3,7 +3,7 @@ import logo from "./img/logo.png";
 
 const Article = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 5;
+  const itemsPerPage = 16;
   const [Articles, setArticles] = useState([
     // Your list of articles here...
 
@@ -230,8 +230,24 @@ const Article = () => {
   ]);
 
   const handleReadMore = (index) => {
-    const updatedArticles = [...Articles];
-    updatedArticles[index].showFullDescription = true;
+    const updatedArticles = currentItems.map((article, i) => {
+      if (i === index) {
+        return { ...article, showFullDescription: true };
+      } else {
+        return article;
+      }
+    });
+    setArticles(updatedArticles);
+  };
+  
+  const handleReadLess = (index) => {
+    const updatedArticles = currentItems.map((article, i) => {
+      if (i === index) {
+        return { ...article, showFullDescription: false };
+      } else {
+        return article;
+      }
+    });
     setArticles(updatedArticles);
   };
 
@@ -248,22 +264,24 @@ const Article = () => {
   const [isLiked, setIsLiked] = useState(Array(currentItems.length).fill(false));
 
   // Function to handle like button click for a specific article
-  const handleLike = (index) => {
-    const newLikes = [...likes];
-    const newIsLiked = [...isLiked];
-
-    if (!newIsLiked[index]) {
-      newLikes[index]++;
-      newIsLiked[index] = true;
+  const handleLike = (articleId) => {
+    const newLikes = { ...likes }; // Create a new object based on the previous likes state
+    const newIsLiked = { ...isLiked }; // Create a new object based on the previous isLiked state
+  
+    if (!newIsLiked[articleId]) {
+      newLikes[articleId] = (newLikes[articleId] || 0) + 1; // Increment like count
+      newIsLiked[articleId] = true; // Set isLiked to true
     } else {
-      newLikes[index] = 0; // Set likes to 0 if unliking
-      newIsLiked[index] = false;
+      newLikes[articleId] -= 1; // Decrement like count if unliking
+      newIsLiked[articleId] = false; // Set isLiked to false
     }
-
-    setLikes(newLikes);
-    setIsLiked(newIsLiked);
+  
+    setLikes(newLikes); // Update likes state
+    setIsLiked(newIsLiked); // Update isLiked state
   };
-  const [comments, setComments] = useState(Array(currentItems.length).fill(0));
+  
+  
+  const [comments, setComments] = useState(Array(currentItems.length).fill());
   const [commentText, setCommentText] = useState("");
   const [showCommentInput, setShowCommentInput] = useState(Array(currentItems.length).fill(false));
   const handleComment = (index) => {
@@ -274,23 +292,33 @@ const Article = () => {
   };
 
   // Function to handle submitting a comment for a specific article
-  const handleSubmitComment = (index) => {
+  const handleSubmitComment = (articleId, commentText) => {
     if (!commentText.trim()) {
       // Alert user if comment input is empty
       alert("Please write something before submitting.");
       return;
     }
-    // Increment comment count and clear the input field after submission
-    const newComments = [...comments];
-    newComments[index]++;
-    setComments(newComments);
+    
+    // Create a new comment object
+    const newComment = {
+      id: comments[articleId] ? comments[articleId].length + 1 : 1, // Generate a unique ID for the comment
+      text: commentText
+    };
+  
+    // Add the new comment to the comments array for the specified article ID
+    setComments(prevComments => ({
+      ...prevComments,
+      [articleId]: prevComments[articleId] ? [...prevComments[articleId], newComment] : [newComment]
+    }));
+  
+    // Clear the input field after submission
     setCommentText("");
+  
     // Hide the comment input field after submission
     const newShowCommentInput = [...showCommentInput];
-    newShowCommentInput[index] = false;
+    newShowCommentInput[articleId] = false;
     setShowCommentInput(newShowCommentInput);
   };
-
   //  const [showSocialMedia, setShowSocialMedia] = useState(false);
 
   // Toggle function for showing/hiding social media icons
@@ -304,32 +332,63 @@ const Article = () => {
   // Define state to manage visibility of social media icons for each article
   const [showSocialMedia, setShowSocialMedia] = useState({});
   
-  // Function to handle sharing on Twitter
-  const handleTwitterShare = (articleId) => {
-    const twitterShareUrl = `https://twitter.com/intent/tweet`;
-    window.open(twitterShareUrl, "_blank", "width=600,height=400");
+// Function to handle sharing on Twitter
+const handleTwitterShare = (articleId) => {
+  const twitterShareUrl = `twitter://post?message=Your%20message%20here`;
+  window.open(twitterShareUrl, "_blank");
+};
+
+// Function to handle sharing on WhatsApp
+const handleWhatsAppShare = (articleId) => {
+  const whatsAppShareUrl = `whatsapp://send?text=Your%20message%20here&source=yourapp`;
+  window.open(whatsAppShareUrl, "_blank");
+};
+
+// Function to handle sharing on Instagram
+const handleInstagramShare = (articleId) => {
+  const instagramShareUrl = `instagram://app?openDirectShare=true`;
+  window.open(instagramShareUrl, "_blank");
+};
+
+// Function to handle sharing on Telegram
+const handleTelegramShare = (articleId) => {
+  const telegramShareUrl = `tg://msg?text=Your%20message%20here`;
+  window.open(telegramShareUrl, "_blank");
+};
+
+  const [showCommentInputField, setShowCommentInputField] = useState({});
+
+  // Function to handle the comment icon click
+  const handleCommentClick = (articleId) => {
+    // Toggle the state variable to show/hide the comment input field
+    setShowCommentInputField((prevState) => ({
+      ...prevState,
+      [articleId]: !prevState[articleId],
+    }));
   };
   
-  // Function to handle sharing on WhatsApp
-  const handleWhatsAppShare = (articleId) => {
-    const whatsAppShareUrl = `https://api.whatsapp.com/send`;
-    window.open(whatsAppShareUrl, "_blank");
-  };
+  const calculateTimeElapsed = (timestamp) => {
+    const currentTime = new Date();
+    const commentTime = new Date(timestamp);
+    const timeDifference = currentTime - commentTime;
+    const seconds = Math.floor(timeDifference / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
   
-  // Function to handle sharing on Instagram
-  const handleInstagramShare = (articleId) => {
-    const instagramShareUrl = `https://www.instagram.com/share`;
-    window.open(instagramShareUrl, "_blank", "width=600,height=400");
-  };
-  
-  // Function to handle sharing on Telegram
-  const handleTelegramShare = (articleId) => {
-    const telegramShareUrl = `https://t.me/share/url`;
-    window.open(telegramShareUrl, "_blank", "width=600,height=400");
+    if (days > 0) {
+      return `${days} day${days > 1 ? 's' : ''} ago`;
+    } else if (hours > 0) {
+      return `${hours} hour${hours > 1 ? 's' : ''} ago`;
+    } else if (minutes > 0) {
+      return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
+    } else {
+      return `${seconds} second${seconds !== 1 ? 's' : ''} ago`;
+    }
   };
   
   return (
-    <div className="articlee">
+    <div className="articlee" style={{height:"auto"}}>
       <>
         {/* About Sidebar */}
         <div className="about-sidebar">
@@ -387,7 +446,7 @@ const Article = () => {
                   {/* News Block */}
                   <div>
                     {/* Article blocks */}
-                    {currentItems.map((Article) => (
+                    {currentItems.map((Article, index) => (
   <div className="news-block_one" key={Article.id} style={{ paddingTop: "30px" }}>
     <div className="news-block_one-inner" style={{ marginBottom: "90px" }}>
       <div className="news-block_one-image">
@@ -398,14 +457,14 @@ const Article = () => {
           <img
             src={Article.articleimg}
             alt=""
-            style={{ objectFit: "cover", maxHeight: "550px" }}
+            style={{ objectFit: "cover", height:"600px"}}
           />
         </a>
         <div className="news-block_one-author">
           <div className="news-block_one-author_image">
             <img src={Article.authorImg} alt="" />
           </div>
-          {Article.authorName}
+          <h6 style={{color:"black"}}>{Article.authorName}</h6>
         </div>
       </div>
       <div className="news-block_one-content">
@@ -413,51 +472,92 @@ const Article = () => {
           <a href="">{Article.articleTitle}</a>
         </h4>
         <div className="news-block_one-text">
-          {Article.showFullDescription || Article.description.length <= 220 ? (
+          {Article.showFullDescription || Article.description.length <= 300 ? (
             Article.description
           ) : (
             <>
-              {`${Article.description.slice(0, 320)}... `}
+              {`${Article.description.slice(0, 300)}... `}
               <button
                 style={{
                   margin: "5px 5px",
                   padding: "5px 5px",
                   backgroundColor: "#d7a222",
                 }}
-                onClick={() => handleReadMore(Article.id)}
+                onClick={() => handleReadMore(index)}
               >
-                Read More
+                Read More...
               </button>
             </>
           )}
+          {Article.showFullDescription && (
+            <button
+              style={{
+                margin: "5px 5px",
+                padding: "5px 5px",
+                backgroundColor: "#d7a222",
+              }}
+              onClick={() => handleReadLess(index)}
+            >
+              Read Less
+            </button>
+          )}
         </div>
-        <div style={{ marginTop: "30px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+      </div>
+    </div>
+    <div style={{ marginTop: "10px", marginBottom: "20px",  padding: "10px",backgroundColor:"#edf1f5" }}>
+  
+  <div >
+  {comments[Article.id] && comments[Article.id].map((comment) => (
+    <div key={comment.id} style={{ display: "flex" }}>
+      <img src={Article.authorImg} alt="" style={{ width: "50px", height: "50px", borderRadius: "25px" }} />
+      <div style={{ marginLeft: "14px" }}>
+        <h6 style={{ color: "black", marginTop: "10px", marginRight: "10px" }}> @{Article.authorName}</h6>
+         <p style={{ fontSize: "16px" }}>{comment.text}</p>
+      </div>
+      <div>
+      <p>{calculateTimeElapsed(comment.timestamp)}</p>
+
+      </div>
+    </div>
+  ))}
+</div>
+
+</div>
+<div style={{ marginTop: "30px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
   {/* Like button with like count */}
   <div style={{ display: "flex", alignItems: "center" }}>
-    <div style={{ display: "flex", alignItems: "center", marginRight: "30px" }}>
-      <span style={{ fontSize: "20px", marginRight: "5px" }}>{likes[Article.id]}</span>
-      <i
-        onClick={() => handleLike(Article.id)}
-        className="fa-regular fa-heart"
-        style={{
-          fontSize: "24px",
-          cursor: "pointer",
-          color: "black",
-          borderRadius: "100%",
-        }}
-      ></i>
-    </div>
+  <div style={{ display: "flex", alignItems: "center", marginRight: "30px" }}>
+  <span style={{ fontSize: "20px", marginRight: "5px" }}>{likes[Article.id]}</span>
+  <i
+    onClick={() => handleLike(Article.id)}
+    className="fa-regular fa-heart"
+    style={{
+      fontSize: "24px",
+      cursor: "pointer",
+      color: isLiked[Article.id] ? "red" : "black", // Change color based on like status
+      borderRadius: "100%",
+    }}
+  ></i>
+</div>
   
     {/* Comment button with comment count */}
     {/* Comment button with comment count */}
-<div style={{ display: "flex", alignItems: "center", marginRight: "10px" }}>
-  <span style={{ fontSize: "20px", marginRight: "5px" }}>{comments[Article.id]}</span>
+    <div style={{ display: "flex", alignItems: "center", marginRight: "10px" }}>
+    
+  
+ 
+    <span style={{ fontSize: "20px", marginleft: "-50px" ,marginRight:"6px"}}>
+      {comments[Article.id] ? comments[Article.id].length : 0} 
+    </span>
+ 
+
   <i
     onClick={() => handleComment(Article.id)}
     className="fa-regular fa-comment"
     style={{
       fontSize: "24px",
       cursor: "pointer",
+      
     }}
   ></i>
 </div>
@@ -474,7 +574,7 @@ const Article = () => {
     />
     {/* Submit button for submitting the comment */}
     <button
-      onClick={() => handleSubmitComment(Article.id)}
+      onClick={() => handleSubmitComment(Article.id, commentText)} // Pass the commentText to handleSubmitComment
       style={{ padding: "5px 10px", backgroundColor: "#d7a222", color: "white", border: "none", borderRadius: "5px", cursor: "pointer" }}
     >
       Submit
@@ -482,13 +582,33 @@ const Article = () => {
   </div>
 )}
 
+
+{/* Container for displaying comments */}
+
+
+
+
+
+{/* Input field for writing a comment */}
+
+
   </div>
 
-  {/* Share button */}
+
+{/* Share button */}
   <div style={{ display: "flex", alignItems: "center" }}>
-    {/* Social media options */}
+    {/* Social media options */}   <i
+      className="fa-solid fa-share-nodes"
+      onClick={() => share(Article.id)} // Pass the article ID to the share function
+      style={{
+        fontSize: "24px",
+        cursor: "pointer",
+        marginLeft: "auto", // Push the share button to the right end
+      }}
+    ></i>
     {showSocialMedia[Article.id] && (
       <ul className="footer-contact_list" style={{ display: "flex", listStyleType: "none", marginRight: "10px", marginBottom: "-20px" }}>
+     
         <li className="">
           <a href="#" onClick={() => handleTwitterShare(Article.id)}>
             <i className="fa-brands fa-twitter" style={{ fontSize: "25px", color: "#1DA1F2" }} />
@@ -511,23 +631,44 @@ const Article = () => {
         </li>
       </ul>
     )}
-    <i
-      className="fa-solid fa-share-nodes"
-      onClick={() => share(Article.id)} // Pass the article ID to the share function
-      style={{
-        fontSize: "24px",
-        cursor: "pointer",
-        marginLeft: "auto", // Push the share button to the right end
-      }}
-    ></i>
+   
   </div>
 </div>
-
-
-      </div>
-    </div>
   </div>
 ))}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      
+
+
 
 
 
