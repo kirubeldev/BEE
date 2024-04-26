@@ -291,12 +291,43 @@ const Article = () => {
     setShowCommentInput(newShowCommentInput);
   };
 
-  const [showSocialMedia, setShowSocialMedia] = useState(false);
+  //  const [showSocialMedia, setShowSocialMedia] = useState(false);
 
-  const handleShareClick = (socialMedia) => {
-    // Logic to handle sharing on the selected social media platform
-    alert(`Sharing on ${socialMedia}`);
+  // Toggle function for showing/hiding social media icons
+  const share = (articleId) => {
+    setShowSocialMedia((prevState) => ({
+      ...prevState,
+      [articleId]: !prevState[articleId]
+    }));
   };
+  
+  // Define state to manage visibility of social media icons for each article
+  const [showSocialMedia, setShowSocialMedia] = useState({});
+  
+  // Function to handle sharing on Twitter
+  const handleTwitterShare = (articleId) => {
+    const twitterShareUrl = `https://twitter.com/intent/tweet`;
+    window.open(twitterShareUrl, "_blank", "width=600,height=400");
+  };
+  
+  // Function to handle sharing on WhatsApp
+  const handleWhatsAppShare = (articleId) => {
+    const whatsAppShareUrl = `https://api.whatsapp.com/send`;
+    window.open(whatsAppShareUrl, "_blank");
+  };
+  
+  // Function to handle sharing on Instagram
+  const handleInstagramShare = (articleId) => {
+    const instagramShareUrl = `https://www.instagram.com/share`;
+    window.open(instagramShareUrl, "_blank", "width=600,height=400");
+  };
+  
+  // Function to handle sharing on Telegram
+  const handleTelegramShare = (articleId) => {
+    const telegramShareUrl = `https://t.me/share/url`;
+    window.open(telegramShareUrl, "_blank", "width=600,height=400");
+  };
+  
   return (
     <div className="articlee">
       <>
@@ -314,20 +345,8 @@ const Article = () => {
               </div>
             </div>
             {/* Social Box */}
-            <div className="social-box">
-              <a href="https://facebook.com/">
-                <i className="fa-brands fa-facebook-f" />
-              </a>
-              <a href="https://twitter.com/">
-                <i className="fa-brands fa-twitter" />
-              </a>
-              <a href="https://youtube.com/">
-                <i className="fa-brands fa-youtube" />
-              </a>
-              <a href="https://instagram.com/">
-                <i className="fa-brands fa-instagram" />
-              </a>
-            </div>
+
+
           </div>
         </div>
         {/* End About Sidebar */}
@@ -412,82 +431,105 @@ const Article = () => {
             </>
           )}
         </div>
-        <div style={{ marginTop: "30px", display: "flex", alignItems: "center" }}>
-          {/* Like button with like count */}
-          <div style={{ display: "flex", alignItems: "center", marginRight: "30px" }}>
-            <span style={{ fontSize: "20px", marginRight: "5px" }}>{likes[Article.id]}</span>
-            <i
-              onClick={() => handleLike(Article.id)}
-              className="fa-regular fa-heart"
-              style={{
-                fontSize: "24px",
-                cursor: "pointer",
-                backgroundColor: "red",
-                color: "black",
-                borderRadius: "100%",
-              }}
-            ></i>
-          </div>
-          
-          {/* Comment button with comment count */}
-          <div style={{ display: "flex", alignItems: "center", marginRight: "10px" }}>
-            <span style={{ fontSize: "20px", marginRight: "5px" }}>{comments[Article.id]}</span>
-            <i
-              onClick={() => handleComment(Article.id)}
-              className="fa-regular fa-comment"
-              style={{
-                fontSize: "24px",
-                cursor: "pointer",
-              }}
-            ></i>
-          </div>
+        <div style={{ marginTop: "30px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+  {/* Like button with like count */}
+  <div style={{ display: "flex", alignItems: "center" }}>
+    <div style={{ display: "flex", alignItems: "center", marginRight: "30px" }}>
+      <span style={{ fontSize: "20px", marginRight: "5px" }}>{likes[Article.id]}</span>
+      <i
+        onClick={() => handleLike(Article.id)}
+        className="fa-regular fa-heart"
+        style={{
+          fontSize: "24px",
+          cursor: "pointer",
+          color: "black",
+          borderRadius: "100%",
+        }}
+      ></i>
+    </div>
+  
+    {/* Comment button with comment count */}
+    {/* Comment button with comment count */}
+<div style={{ display: "flex", alignItems: "center", marginRight: "10px" }}>
+  <span style={{ fontSize: "20px", marginRight: "5px" }}>{comments[Article.id]}</span>
+  <i
+    onClick={() => handleComment(Article.id)}
+    className="fa-regular fa-comment"
+    style={{
+      fontSize: "24px",
+      cursor: "pointer",
+    }}
+  ></i>
+</div>
 
-          {/* Input field for writing a comment */}
-          {showCommentInput[Article.id] && (
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <input
-                type="text"
-                value={commentText}
-                onChange={(e) => setCommentText(e.target.value)}
-                placeholder="Write a comment..."
-                style={{ padding: "5px", marginRight: "10px" }}
-              />
-              {/* Submit button for submitting the comment */}
-              <button
-                onClick={() => handleSubmitComment(Article.id)}
-                style={{ padding: "5px 10px", backgroundColor: "#d7a222", color: "white", border: "none", borderRadius: "5px", cursor: "pointer" }}
-              >
-                Submit
-              </button>
-            </div>
-          )}
+{/* Input field for writing a comment */}
+{showCommentInput[Article.id] && (
+  <div style={{ display: "flex", alignItems: "center" }}>
+    <input
+      type="text"
+      value={commentText}
+      onChange={(e) => setCommentText(e.target.value)}
+      placeholder="Write a comment..."
+      style={{ padding: "5px", marginRight: "10px", backgroundColor: "white", color: "black" }}
+    />
+    {/* Submit button for submitting the comment */}
+    <button
+      onClick={() => handleSubmitComment(Article.id)}
+      style={{ padding: "5px 10px", backgroundColor: "#d7a222", color: "white", border: "none", borderRadius: "5px", cursor: "pointer" }}
+    >
+      Submit
+    </button>
+  </div>
+)}
 
-          {/* Share button */}
-          <div style={{ marginLeft: "auto", marginRight: "10px" }}>
-            <i
-              className="fa-solid fa-share-nodes"
-              onMouseEnter={() => setShowSocialMedia(true)}
-              onMouseLeave={() => setShowSocialMedia(false)}
-              style={{
-                fontSize: "24px",
-                cursor: "pointer",
-              }}
-            ></i>
-            {/* Social media options */}
-            {showSocialMedia && (
-              <div className="social-media-options">
-                <button onClick={() => handleShareClick("Facebook")}>Facebook</button>
-                <button onClick={() => handleShareClick("Twitter")}>Twitter</button>
-                <button onClick={() => handleShareClick("Instagram")}>Instagram</button>
-                {/* Add more social media options as needed */}
-              </div>
-            )}
-          </div>
-        </div>
+  </div>
+
+  {/* Share button */}
+  <div style={{ display: "flex", alignItems: "center" }}>
+    {/* Social media options */}
+    {showSocialMedia[Article.id] && (
+      <ul className="footer-contact_list" style={{ display: "flex", listStyleType: "none", marginRight: "10px", marginBottom: "-20px" }}>
+        <li className="">
+          <a href="#" onClick={() => handleTwitterShare(Article.id)}>
+            <i className="fa-brands fa-twitter" style={{ fontSize: "25px", color: "#1DA1F2" }} />
+          </a>
+        </li>
+        <li>
+          <a href="#" onClick={() => handleWhatsAppShare(Article.id)}>
+            <i className="fa-brands fa-whatsapp" style={{ fontSize: "25px", color: "#25D366" }} />
+          </a>
+        </li>
+        <li>
+          <a href="#" onClick={() => handleInstagramShare(Article.id)}>
+            <i className="fa-brands fa-instagram" style={{ fontSize: "25px", color: "#C13584" }} />
+          </a>
+        </li>
+        <li>
+          <a href="#" onClick={() => handleTelegramShare(Article.id)}>
+            <i className="fa-brands fa-telegram" style={{ fontSize: "25px", color: "#0088cc" }} />
+          </a>
+        </li>
+      </ul>
+    )}
+    <i
+      className="fa-solid fa-share-nodes"
+      onClick={() => share(Article.id)} // Pass the article ID to the share function
+      style={{
+        fontSize: "24px",
+        cursor: "pointer",
+        marginLeft: "auto", // Push the share button to the right end
+      }}
+    ></i>
+  </div>
+</div>
+
+
       </div>
     </div>
   </div>
 ))}
+
+
 
 
                     {/* Pagination */}
