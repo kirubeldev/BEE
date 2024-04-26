@@ -41,7 +41,9 @@
 
   }
   .category-one{margin-bottom: 330px;}
+  
 }
+
 
 .mobnav{
 	position: fixed !important;
@@ -83,8 +85,15 @@
 	height: 99.6vh !important;
 
 } 
+
 }
-  
+.commentdiv{
+	max-height: 10vh;
+	overflow-y: scroll;
+}
+.commentdiv::-webkit-scrollbar{
+	display: none;
+}
 
  .link{
 	margin-top: 32px;

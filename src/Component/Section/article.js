@@ -502,11 +502,9 @@ const handleTelegramShare = (articleId) => {
             </button>
           )}
         </div>
-      </div>
-    </div>
-    <div style={{ marginTop: "10px", marginBottom: "20px",  padding: "10px",backgroundColor:"#edf1f5" }}>
+        <div style={{ marginTop: "10px", marginBottom: "20px",  padding: "10px",backgroundColor:"#edf1f5" }}>
   
-  <div >
+  <div className="commentdiv">
   {comments[Article.id] && comments[Article.id].map((comment) => (
     <div key={comment.id} style={{ display: "flex" }}>
       <img src={Article.authorImg} alt="" style={{ width: "50px", height: "50px", borderRadius: "25px" }} />
@@ -523,7 +521,7 @@ const handleTelegramShare = (articleId) => {
 </div>
 
 </div>
-<div style={{ marginTop: "30px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+    <div style={{ marginTop: "30px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
   {/* Like button with like count */}
   <div style={{ display: "flex", alignItems: "center" }}>
   <div style={{ display: "flex", alignItems: "center", marginRight: "30px" }}>
@@ -634,6 +632,8 @@ const handleTelegramShare = (articleId) => {
    
   </div>
 </div>
+      </div>
+    </div>
   </div>
 ))}
 
@@ -666,7 +666,7 @@ const handleTelegramShare = (articleId) => {
 
 
         
-      
+    
 
 
 
