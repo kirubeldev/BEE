@@ -88,7 +88,7 @@
 
 }
 .commentdiv{
-	max-height: 10vh;
+	max-height: 25vh;
 	overflow-y: scroll;
 }
 .commentdiv::-webkit-scrollbar{

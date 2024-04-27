@@ -510,7 +510,7 @@ const handleTelegramShare = (articleId) => {
       <img src={Article.authorImg} alt="" style={{ width: "50px", height: "50px", borderRadius: "25px" }} />
       <div style={{ marginLeft: "14px" }}>
         <h6 style={{ color: "black", marginTop: "10px", marginRight: "10px" }}> @{Article.authorName}</h6>
-         <p style={{ fontSize: "16px" }}>{comment.text}</p>
+         <p style={{ fontSize: "16px"}}>{comment.text}</p>
       </div>
       <div>
       <p>{calculateTimeElapsed(comment.timestamp)}</p>
