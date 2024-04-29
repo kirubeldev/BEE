@@ -31,6 +31,21 @@
 ====================================================================
 ***/
 
+
+.comment-input-containerr {
+	display: flex;
+	align-items: center;
+  }
+  
+
+  @media (min-width: 768px) {
+
+	.comment-input-containerr{
+		display: none;
+        margin-Bottom:"140px"
+	} 
+  }
+
  @media (max-width: 768px) {
    body {
    max-width: 100% !important;
@@ -41,6 +56,13 @@
 
   }
   .category-one{margin-bottom: 330px;}
+  .comment-input-container{
+display: none;
+  }.commentdiv{
+	max-height: 13vh !important;
+	overflow-y: scroll;
+}
+ 
   
 }
 
@@ -50,7 +72,7 @@
 	
 }
 @media screen and (min-width : 720px) {
-	.about-one , .abou, .blogss , .articlee, .contac , .testimonial-one ,.gallery-one ,.news-one  {
+	.about-one , .abou, .blogss , .articlee, .contac , .testimonial-one ,.gallery-one ,.news-one {
 	transform: scale(0.89);
 	transform-origin: top left;
 	width: 111.11111%;
@@ -88,7 +110,7 @@
 
 }
 .commentdiv{
-	max-height: 25vh;
+	max-height: 16vh;
 	overflow-y: scroll;
 }
 .commentdiv::-webkit-scrollbar{

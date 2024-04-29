@@ -3,7 +3,7 @@ import logo from "./img/logo.png";
 
 const Article = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 16;
+  const itemsPerPage = 6;
   const [Articles, setArticles] = useState([
     // Your list of articles here...
 
@@ -388,7 +388,7 @@ const handleTelegramShare = (articleId) => {
   };
   
   return (
-    <div className="articlee" style={{height:"auto"}}>
+    <div className="articlee" style={{height:"auto",textAlign:"justify"}}>
       <>
         {/* About Sidebar */}
         <div className="about-sidebar">
@@ -481,7 +481,7 @@ const handleTelegramShare = (articleId) => {
                 style={{
                   margin: "5px 5px",
                   padding: "5px 5px",
-                  backgroundColor: "#d7a222",
+                  backgroundColor: "#d7a222",textAlign:"justify"
                 }}
                 onClick={() => handleReadMore(index)}
               >
@@ -494,7 +494,8 @@ const handleTelegramShare = (articleId) => {
               style={{
                 margin: "5px 5px",
                 padding: "5px 5px",
-                backgroundColor: "#d7a222",
+                backgroundColor: "#d7a222"
+                ,textAlign:"justify"
               }}
               onClick={() => handleReadLess(index)}
             >
@@ -502,29 +503,11 @@ const handleTelegramShare = (articleId) => {
             </button>
           )}
         </div>
-        <div style={{ marginTop: "10px", marginBottom: "20px",  padding: "10px",backgroundColor:"#edf1f5" }}>
-  
-  <div className="commentdiv">
-  {comments[Article.id] && comments[Article.id].map((comment) => (
-    <div key={comment.id} style={{ display: "flex" }}>
-      <img src={Article.authorImg} alt="" style={{ width: "50px", height: "50px", borderRadius: "25px" }} />
-      <div style={{ marginLeft: "14px" }}>
-        <h6 style={{ color: "black", marginTop: "10px", marginRight: "10px" }}> @{Article.authorName}</h6>
-         <p style={{ fontSize: "16px"}}>{comment.text}</p>
-      </div>
-      <div>
-      <p>{calculateTimeElapsed(comment.timestamp)}</p>
-
-      </div>
-    </div>
-  ))}
-</div>
-
-</div>
-    <div style={{ marginTop: "30px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+      
+    <div style={{ marginTop: "30px", display: "flex", alignItems: "center", justifyContent: "space-between",textAlign:"justify" }}>
   {/* Like button with like count */}
   <div style={{ display: "flex", alignItems: "center" }}>
-  <div style={{ display: "flex", alignItems: "center", marginRight: "30px" }}>
+  <div className="mb10"  style={{ display: "flex", alignItems: "center", marginRight: "30px", marginBottom:"19px" }}>
   <span style={{ fontSize: "20px", marginRight: "5px" }}>{likes[Article.id]}</span>
   <i
     onClick={() => handleLike(Article.id)}
@@ -537,64 +520,54 @@ const handleTelegramShare = (articleId) => {
     }}
   ></i>
 </div>
-  
+  {/* <div className="commentt" style={{display:"block"}}> */}
     {/* Comment button with comment count */}
     {/* Comment button with comment count */}
-    <div style={{ display: "flex", alignItems: "center", marginRight: "10px" }}>
-    
-  
- 
-    <span style={{ fontSize: "20px", marginleft: "-50px" ,marginRight:"6px"}}>
-      {comments[Article.id] ? comments[Article.id].length : 0} 
-    </span>
- 
-
+    <div className="mb10" style={{ display: "flex", alignItems: "center", marginRight: "10px", marginBottom:"19px" }}>
+  <span style={{ fontSize: "20px", marginRight: "6px",textAlign:"justify" }}>
+    {comments[Article.id] ? comments[Article.id].length : 0} 
+  </span>
   <i
     onClick={() => handleComment(Article.id)}
     className="fa-regular fa-comment"
-    style={{
-      fontSize: "24px",
-      cursor: "pointer",
-      
-    }}
+    style={{ fontSize: "24px", cursor: "pointer" }}
   ></i>
 </div>
 
-{/* Input field for writing a comment */}
+{/* Input field and submit button for writing a comment */}
+
+
+
+
+<div  style={{paddingBottom:"15px"}}> 
 {showCommentInput[Article.id] && (
-  <div style={{ display: "flex", alignItems: "center" }}>
-    <input
-      type="text"
-      value={commentText}
-      onChange={(e) => setCommentText(e.target.value)}
-      placeholder="Write a comment..."
-      style={{ padding: "5px", marginRight: "10px", backgroundColor: "white", color: "black" }}
-    />
-    {/* Submit button for submitting the comment */}
-    <button
-      onClick={() => handleSubmitComment(Article.id, commentText)} // Pass the commentText to handleSubmitComment
-      style={{ padding: "5px 10px", backgroundColor: "#d7a222", color: "white", border: "none", borderRadius: "5px", cursor: "pointer" }}
-    >
-      Submit
-    </button>
-  </div>
-)}
-
-
-{/* Container for displaying comments */}
+   <div className="comment-input-container">
+   <input
+     type="text"
+     value={commentText}
+     onChange={(e) => setCommentText(e.target.value)}
+     placeholder="Write a comment..."
+     style={{ padding: "5px", marginRight: "10px", backgroundColor: "white", color: "black" }}
+   />
+   {/* Submit button for submitting the comment */}
+   <button
+     onClick={() => handleSubmitComment(Article.id, commentText)}
+     style={{ padding: "5px 10px", backgroundColor: "#d7a222", color: "white", border: "none", borderRadius: "5px", cursor: "pointer" }}
+   >
+     Submit
+   </button>
+ </div>
+)}</div>
 
 
 
 
-
-{/* Input field for writing a comment */}
-
-
-  </div>
+</div>
+  {/* </div> */}
 
 
 {/* Share button */}
-  <div style={{ display: "flex", alignItems: "center" }}>
+  <div className="mb10"  style={{ display: "flex", alignItems: "center", marginBottom:"19px" }}>
     {/* Social media options */}   <i
       className="fa-solid fa-share-nodes"
       onClick={() => share(Article.id)} // Pass the article ID to the share function
@@ -631,6 +604,42 @@ const handleTelegramShare = (articleId) => {
     )}
    
   </div>
+ 
+</div>
+{showCommentInput[Article.id] && (
+  <div className="comment-input-containerr">
+    <input
+      type="text"
+      value={commentText}
+      onChange={(e) => setCommentText(e.target.value)}
+      placeholder="Write a comment..."
+      style={{ padding: "5px", marginRight: "10px", backgroundColor: "white", color: "black",marginBottom:"20px" }}
+    />
+    {/* Submit button for submitting the comment */}
+    <button
+      onClick={() => handleSubmitComment(Article.id, commentText)}
+      style={{ padding: "5px 10px", backgroundColor: "#d7a222", color: "white", border: "none", borderRadius: "5px", cursor: "pointer",marginBottom:"20px" }}
+    >
+      Submit
+    </button>
+    
+  </div>
+  
+)}
+<div className="commentdiv">
+  {comments[Article.id] && comments[Article.id].map((comment) => (
+    <div key={comment.id} style={{ display: "flex" }}>
+      <img src={Article.authorImg} alt="" style={{ width: "50px", height: "50px", borderRadius: "25px" }} />
+      <div style={{ marginLeft: "14px" }}>
+        <h6 style={{ color: "black", marginTop: "10px", marginRight: "10px" }}> @{Article.authorName}</h6>
+         <p style={{ fontSize: "16px"}}>{comment.text}</p>
+      </div>
+      <div>
+      <p>{calculateTimeElapsed(comment.timestamp)}</p>
+
+      </div>
+    </div>
+  ))}
 </div>
       </div>
     </div>
