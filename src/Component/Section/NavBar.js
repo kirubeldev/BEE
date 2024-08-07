@@ -343,7 +343,7 @@ export default function NavBar() {
                     </div>
                   </div>
                   <div className="about-one_button">
-              <a className="btn-style-two theme-btn" href="about.html" >
+              <a className="btn-style-two theme-btn" href="#" >
                 <div className="btn-wrap" >
                   <span className="text-one">Login</span>
                   <span className="text-two">Login</span>
